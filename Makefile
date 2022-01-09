@@ -5,9 +5,9 @@ BUILD := build
 DIST := dist
 REPO := $(BUILD)/repo
 
-.PHONY: standard setup validate deps build bundle install run clean
+.PHONY: standard setup deps build bundle install run clean
 
-standard: setup validate build bundle install
+standard: setup build bundle install
 
 deps:
 	@python3 flatpak-builder-tools/pip/flatpak-pip-generator --requirements-file=./requirements.txt --output pypi-dependencies
@@ -19,10 +19,6 @@ deps:
 setup:
 	@flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	@flatpak install --system -y flathub org.flatpak.Builder org.kde.Sdk//6.2 org.kde.Platform//6.2 org.freedesktop.Sdk.Extension.llvm12//21.08
-
-validate:
-	@desktop-file-validate org.coolero.Coolero.desktop
-	@appstream-util validate-relax org.coolero.Coolero.metainfo.xml
 
 build:
 	@flatpak run org.flatpak.Builder --force-clean --repo=$(REPO) $(BUILD) $(ID).yaml
