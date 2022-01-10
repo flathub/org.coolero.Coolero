@@ -62,15 +62,6 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/c0/77/6570a4cc3f706f1afb217a1603d1b05ebf8e259d5a04256904ef2575e108/fonttools-4.28.5-py3-none-any.whl
         sha256: edf251d5d2cc0580d5f72de4621c338d8c66c5f61abb50cf486640f73c8194d5
-  - name: python3-gputil
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "gputil==1.4.0" --no-build-isolation
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/ed/0e/5c61eedde9f6c87713e89d794f01e378cfd9565847d4576fa627d758c554/GPUtil-1.4.0.tar.gz
-        sha256: 099e52c65e512cdfa8c8763fca67f5a5c2afb63469602d5dcb4d296b3661efb9
   - name: python3-hidapi
     buildsystem: simple
     build-commands:
