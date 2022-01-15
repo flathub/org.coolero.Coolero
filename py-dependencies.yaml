@@ -222,11 +222,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "types-psutil==5.8.17" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "types-psutil==5.8.19" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/0e/4d/2e6c56476e970ad7377322173c5d71e31ec19b28cf85c08517785c8a6392/types_psutil-5.8.17-py3-none-any.whl
-        sha256: 7e7fc252219ad187906e975ece0ac34a449bcd62f73494a84e05f00ec4fb9a1d
+        url: https://files.pythonhosted.org/packages/83/ed/19589d61c586954cc5bb92baada6650a5c34f5810bd16b27b2ead6f9db5a/types_psutil-5.8.19-py3-none-any.whl
+        sha256: ab64669edb9850787ed5842a34129fb169a89dcf3f808f1224c299c423ebeb45
   - name: python3-tzlocal
     buildsystem: simple
     build-commands:
