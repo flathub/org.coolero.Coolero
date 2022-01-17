@@ -111,11 +111,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "numpy==1.21.5" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "numpy==1.22.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/c2/a8/a924a09492bdfee8c2ec3094d0a13f2799800b4fdc9c890738aeeb12c72e/numpy-1.21.5.zip
-        sha256: 6a5928bc6241264dce5ed509e66f33676fc97f464e7a919edc672fb5532221ee
+        url: https://files.pythonhosted.org/packages/0a/c8/a62767a6b374a0dfb02d2a0456e5f56a372cdd1689dbc6ffb6bf1ddedbc0/numpy-1.22.1.zip
+        sha256: e348ccf5bc5235fc405ab19d53bec215bb373300e5523c7b476cc0da8a5e9973
   - name: python3-packaging
     buildsystem: simple
     build-commands:
@@ -182,6 +182,15 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/15/a8/4982498b2ab44d1fcd5c49f07ea3795eab01601dc143b009d333fcace3b9/pyusb-1.2.1-py3-none-any.whl
         sha256: 2b4c7cb86dbadf044dfb9d3a4ff69fd217013dbe78a792177a3feb172449ea36
+  - name: python3-setproctitle
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "setproctitle==1.2.2" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/a1/7f/a1d4f4c7b66f0fc02f35dc5c85f45a8b4e4a7988357a29e61c14e725ef86/setproctitle-1.2.2.tar.gz
+        sha256: 7dfb472c8852403d34007e01d6e3c68c57eb66433fb8a5c77b13b89a160d97df
   - name: python3-setuptools-scm
     buildsystem: simple
     build-commands:
