@@ -4,7 +4,7 @@ runtime-version: '6.2'
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm12
-command: coolero.sh
+command: coolero
 finish-args:
   - --share=ipc
   - --socket=fallback-x11
@@ -96,14 +96,10 @@ modules:
       - install -Dm644 metadata/org.coolero.Coolero.png /app/share/icons/hicolor/scalable/apps/org.coolero.Coolero.png
       - install -Dm644 metadata/org.coolero.Coolero.desktop /app/share/applications/org.coolero.Coolero.desktop
       - install -Dm644 metadata/org.coolero.Coolero.metainfo.xml -t /app/share/metainfo
-      - install -Dm755 -t /app/bin/ coolero.sh
+      - ln -s /app/coolero/coolero.py /app/bin/coolero
     sources:
       - type: git
         url: https://gitlab.com/codifryed/coolero.git
-        tag: 0.5.4
-        commit: b3a6aa6140b7b8c3996ae097e397ac623872ce8b
+        tag: 0.5.5
+        commit: 70804c37efbd942e61d5469688719db73113843e
         disable-submodules: true
-      - type: script
-        dest-filename: coolero.sh
-        commands:
-          - python3 /app/coolero/coolero.py "$@"
