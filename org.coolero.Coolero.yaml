@@ -66,8 +66,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/qtproject/pyside-pyside-setup.git
-        branch: 6.2.1
-        commit: 4cc0c0beb5519e03c9c2adeb61ffb4a5ea38a2fc
+        tag: v6.2.2.1
+        commit: 01652c9577018d880e8aa75660b3bb4a61fb9487
   - name: pyside6
     buildsystem: cmake-ninja
     builddir: true
@@ -81,12 +81,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/qtproject/pyside-pyside-setup.git
-        branch: 6.2.1
-        commit: 4cc0c0beb5519e03c9c2adeb61ffb4a5ea38a2fc
+        tag: v6.2.2.1
+        commit: 01652c9577018d880e8aa75660b3bb4a61fb9487
       - type: shell
         commands:
           - mkdir -p /app/include/qt6tmp && cp -R /usr/include/Qt* /app/include/qt6tmp # https://bugreports.qt.io/broswse/PYSIDE-787
           - sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake
+          - sed -i 's|<signature_p.h>|<signature/signature_p.h>|' sources/pyside6/libpyside/feature_select.cpp # fixes build issue introduced in 6.2.2
 
   - name: coolero
     buildsystem: simple
