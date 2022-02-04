@@ -6,17 +6,17 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "apscheduler==3.8.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "apscheduler==3.8.1" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/d3/e3/d9f046b5d1c94a3aeab15f1f867aa414f8ee9d196fae6865f1d6a0ee1a0b/pytz-2021.3-py2.py3-none-any.whl
         sha256: 3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c
       - type: file
-        url: https://files.pythonhosted.org/packages/a3/f0/f5ec8f05e9c75d04d42f3b8b441fbcf662e3e4e08663419edb0475a5b3e3/APScheduler-3.8.0-py2.py3-none-any.whl
-        sha256: 82d6d21b2f0343510d07bb35618333a794653439a265635555b12935647b460a
-      - type: file
         url: https://files.pythonhosted.org/packages/5d/94/d47b0fd5988e6b7059de05720a646a2930920fff247a826f61674d436ba4/tzlocal-2.1-py2.py3-none-any.whl
         sha256: e2cb6c6b5b604af38597403e9852872d7f534962ae2954c7f35efcb1ccacf4a4
+      - type: file
+        url: https://files.pythonhosted.org/packages/7b/bc/410764a2e30bd79df344475a1b0691f1fe3ab5385ad3f47f8dcc673babe5/APScheduler-3.8.1-py2.py3-none-any.whl
+        sha256: c22cb14b411a31435eb2c530dfbbec948ac63015b517087c7978adb61b574865
   - name: python3-colorama
     buildsystem: simple
     build-commands:
@@ -120,11 +120,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "numpy==1.22.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "numpy==1.22.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/0a/c8/a62767a6b374a0dfb02d2a0456e5f56a372cdd1689dbc6ffb6bf1ddedbc0/numpy-1.22.1.zip
-        sha256: e348ccf5bc5235fc405ab19d53bec215bb373300e5523c7b476cc0da8a5e9973
+        url: https://files.pythonhosted.org/packages/e9/6c/c0a8130fe198f27bab92f1b28631e0cc2572295f6b7a31e87efe7448aa1c/numpy-1.22.2.zip
+        sha256: 076aee5a3763d41da6bef9565fdf3cb987606f567cd8b104aded2b38b7b47abf
   - name: python3-packaging
     buildsystem: simple
     build-commands:
@@ -141,11 +141,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pillow==9.0.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pillow==9.0.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/b0/43/3e286c93b9fa20e233d53532cc419b5aad8a468d91065dbef4c846058834/Pillow-9.0.0.tar.gz
-        sha256: ee6e2963e92762923956fe5d3479b1fdc3b76c83f290aad131a2f98c3df0593e
+        url: https://files.pythonhosted.org/packages/03/a3/f61a9a7ff7969cdef2a6e0383a346eb327495d20d25a2de5a088dbb543a6/Pillow-9.0.1.tar.gz
+        sha256: 6c8bc8238a7dfdaf7a75f5ec5a663f4173f8c367e5a39f87e720495e1eed75fa
   - name: python3-psutil
     buildsystem: simple
     build-commands:
@@ -286,8 +286,8 @@ modules:
         url: https://files.pythonhosted.org/packages/8e/87/259fde8cf07d06677f0a749cb157d079ebd00d40fe52faaab1a882a66159/kiwisolver-1.3.2.tar.gz
         sha256: fc4453705b81d03568d5b808ad8f09c77c47534f6ac2e72e733f9ca4714aa75c
       - type: file
-        url: https://files.pythonhosted.org/packages/b0/43/3e286c93b9fa20e233d53532cc419b5aad8a468d91065dbef4c846058834/Pillow-9.0.0.tar.gz
-        sha256: ee6e2963e92762923956fe5d3479b1fdc3b76c83f290aad131a2f98c3df0593e
+        url: https://files.pythonhosted.org/packages/03/a3/f61a9a7ff7969cdef2a6e0383a346eb327495d20d25a2de5a088dbb543a6/Pillow-9.0.1.tar.gz
+        sha256: 6c8bc8238a7dfdaf7a75f5ec5a663f4173f8c367e5a39f87e720495e1eed75fa
       - type: file
         url: https://files.pythonhosted.org/packages/a0/34/895006117f6fce0b4de045c87e154ee4a20c68ec0a4c9a36d900888fb6bc/pyparsing-3.0.6-py3-none-any.whl
         sha256: 04ff808a5b90911829c55c4e26f75fa5ca8a2f5f36aa3a51f68e27033341d3e4

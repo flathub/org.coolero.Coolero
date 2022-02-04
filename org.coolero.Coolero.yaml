@@ -67,8 +67,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/qtproject/pyside-pyside-setup.git
-        tag: v6.2.2.1
-        commit: 01652c9577018d880e8aa75660b3bb4a61fb9487
+        tag: v6.2.3
+        commit: 1966aae5401de5129f571fdb5bb1d9b1e69ab143
   - name: pyside6
     buildsystem: cmake-ninja
     builddir: true
@@ -82,8 +82,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/qtproject/pyside-pyside-setup.git
-        tag: v6.2.2.1
-        commit: 01652c9577018d880e8aa75660b3bb4a61fb9487
+        tag: v6.2.3
+        commit: 1966aae5401de5129f571fdb5bb1d9b1e69ab143
       - type: shell
         commands:
           - mkdir -p /app/include/qt6tmp && cp -R /usr/include/Qt* /app/include/qt6tmp # https://bugreports.qt.io/broswse/PYSIDE-787
@@ -102,6 +102,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/codifryed/coolero.git
-        tag: 0.6.4
-        commit: 0a070cebca3811d458958077c132ee29d731af36
+        tag: 0.6.5
+        commit: f133b4b474d2feac80b23c64259efd4a0b58614f
         disable-submodules: true

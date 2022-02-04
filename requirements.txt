@@ -1,4 +1,4 @@
-apscheduler==3.8.0; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.5.0" and python_version < "4")
+apscheduler==3.8.1; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.5.0" and python_version < "4")
 colorama==0.4.4; python_version >= "3.7" and python_full_version < "3.0.0" and sys_platform == "win32" or sys_platform == "win32" and python_version >= "3.7" and python_full_version >= "3.5.0"
 colorlog==6.6.0; python_version >= "3.7"
 cycler==0.11.0; python_version >= "3.7"
@@ -9,10 +9,10 @@ jeepney==0.7.1; python_version >= "3.6"
 kiwisolver==1.3.2; python_version >= "3.7"
 liquidctl==1.8.1; python_version >= "3.7"
 matplotlib==3.5.1; python_version >= "3.7"
-# nuitka==0.6.19.5
-numpy==1.22.1; python_version >= "3.8"
+# nuitka==0.6.19.6
+numpy==1.22.2; python_version >= "3.8"
 packaging==21.3; python_version >= "3.7"
-pillow==9.0.0; python_version >= "3.7"
+pillow==9.0.1; python_version >= "3.7"
 psutil==5.9.0; (python_version >= "2.6" and python_full_version < "3.0.0") or (python_full_version >= "3.4.0")
 # pyamdgpuinfo==2.1.1
 pyparsing==3.0.7; python_version >= "3.7"
@@ -27,4 +27,4 @@ six==1.16.0; python_version >= "3.7" and python_full_version < "3.0.0" or python
 smbus==1.1.post2; python_version >= "3.7"
 tomli==2.0.0; python_version >= "3.7"
 types-psutil==5.8.20
-tzlocal==2.1; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version < "4"
+tzlocal==2.1
