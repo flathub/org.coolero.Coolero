@@ -14,17 +14,17 @@ numpy==1.22.2; python_version >= "3.8"
 packaging==21.3; python_version >= "3.7"
 pillow==9.0.1; python_version >= "3.7"
 psutil==5.9.0; (python_version >= "2.6" and python_full_version < "3.0.0") or (python_full_version >= "3.4.0")
-# pyamdgpuinfo==2.1.1
+# pyamdgpuinfo==2.1.2
 pyparsing==3.0.7; python_version >= "3.7"
-# pyside6==6.2.2.1; python_version >= "3.6" and python_version < "3.11"
+# pyside6==6.2.3; python_version >= "3.6" and python_version < "3.11"
 python-dateutil==2.8.2; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.3.0" and python_version >= "3.7"
 pytz==2021.3; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version < "4"
 pyusb==1.2.1; python_full_version >= "3.6.0" and python_version >= "3.7"
 setproctitle==1.2.2; python_version >= "3.6"
 setuptools-scm==6.4.2; python_version >= "3.7"
-# shiboken6==6.2.2.1; python_version >= "3.6" and python_version < "3.11"
+# shiboken6==6.2.3; python_version >= "3.6" and python_version < "3.11"
 six==1.16.0; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version < "4" and python_version >= "3.7"
 smbus==1.1.post2; python_version >= "3.7"
-tomli==2.0.0; python_version >= "3.7"
+tomli==2.0.1; python_version >= "3.7"
 types-psutil==5.8.20
 tzlocal==2.1
