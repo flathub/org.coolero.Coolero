@@ -19,6 +19,41 @@ cleanup:
   - '*.la'
   - '*.a'
 modules:
+  # embed the version of python we want to use (can remove once flatpak upgrades to 3.10)
+  - name: python
+    sources:
+      - type: archive
+        url: https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tar.xz
+        md5: 14e8c22458ed7779a1957b26cde01db9
+  # automatically added python deps needed for own version:
+  - name: cython
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "cython==0.29.28" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/9f/79/311cfbca90332ab37ef8ea08f1af3266f20a9a0e7a1d652842db832226bb/Cython-0.29.28-py2.py3-none-any.whl
+        sha256: 26d8d0ededca42be50e0ac377c08408e18802b1391caa3aea045a72c1bff47ac
+  - name: wheel
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "wheel==0.37.1" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl
+        sha256: 4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a
+  - name: six
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "six==1.16.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl
+        sha256: 8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
+
   - shared-modules/libusb/libusb.json
 
   # prerequisites not handled by script
@@ -79,6 +114,9 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
       - -DBUILD_TESTS=OFF
       - -DCMAKE_SKIP_RPATH:BOOL=YES
+      - -DPYTHON_EXECUTABLE=/app/bin/python3
+      - -DPYTHON_LIBRARY=/app/lib/libpython3.10.a
+      - -DPYTHON_INCLUDE_DIR=/app/include/python3.10
     sources:
       - type: git
         url: https://github.com/qtproject/pyside-pyside-setup.git
@@ -98,6 +136,7 @@ modules:
       - install -Dm644 metadata/org.coolero.Coolero.png /app/share/icons/hicolor/scalable/apps/org.coolero.Coolero.png
       - install -Dm644 metadata/org.coolero.Coolero.desktop /app/share/applications/org.coolero.Coolero.desktop
       - install -Dm644 metadata/org.coolero.Coolero.metainfo.xml -t /app/share/metainfo
+      - sed -i 's|/usr/bin/env python3|/app/bin/python3|' /app/coolero/coolero.py  # force use of own python version
       - ln -s /app/coolero/coolero.py /app/bin/coolero
     sources:
       - type: git
