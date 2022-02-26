@@ -6,17 +6,23 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "apscheduler==3.8.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "apscheduler==3.9.0.post1" --no-build-isolation
     sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
+        sha256: 8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6
       - type: file
         url: https://files.pythonhosted.org/packages/d3/e3/d9f046b5d1c94a3aeab15f1f867aa414f8ee9d196fae6865f1d6a0ee1a0b/pytz-2021.3-py2.py3-none-any.whl
         sha256: 3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c
       - type: file
-        url: https://files.pythonhosted.org/packages/5d/94/d47b0fd5988e6b7059de05720a646a2930920fff247a826f61674d436ba4/tzlocal-2.1-py2.py3-none-any.whl
-        sha256: e2cb6c6b5b604af38597403e9852872d7f534962ae2954c7f35efcb1ccacf4a4
+        url: https://files.pythonhosted.org/packages/ac/29/0daef8da885f35b3c8a54ac45378d4829a7f787ec55475b541bed3df6a36/tzlocal-4.1-py3-none-any.whl
+        sha256: 28ba8d9fcb6c9a782d6e0078b4f6627af1ea26aeaa32b4eab5324abc7df4149f
       - type: file
-        url: https://files.pythonhosted.org/packages/7b/bc/410764a2e30bd79df344475a1b0691f1fe3ab5385ad3f47f8dcc673babe5/APScheduler-3.8.1-py2.py3-none-any.whl
-        sha256: c22cb14b411a31435eb2c530dfbbec948ac63015b517087c7978adb61b574865
+        url: https://files.pythonhosted.org/packages/8e/b4/fadc940618942703712efc9bb33ea5ca784b16c080df9d0e889c542cbd13/APScheduler-3.9.0.post1-py2.py3-none-any.whl
+        sha256: f8a3e6e4d178de40fdbd5a3eefcc217588fc7f42f443e2335bb2dc29daf99357
+      - type: file
+        url: https://files.pythonhosted.org/packages/a5/3a/0d12fac5618ff5396095a139b9c77cad79b65ed78c58bf7162cd512f52d5/tzdata-2021.5-py2.py3-none-any.whl
+        sha256: 3eee491e22ebfe1e5cfcc97a4137cd70f092ce59144d81f8924a844de05ba8f5
   - name: python3-colorama
     buildsystem: simple
     build-commands:
@@ -173,6 +179,18 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl
         sha256: 961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9
+  - name: python3-pytz-deprecation-shim
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "pytz-deprecation-shim==0.1.0.post0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
+        sha256: 8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6
+      - type: file
+        url: https://files.pythonhosted.org/packages/a5/3a/0d12fac5618ff5396095a139b9c77cad79b65ed78c58bf7162cd512f52d5/tzdata-2021.5-py2.py3-none-any.whl
+        sha256: 3eee491e22ebfe1e5cfcc97a4137cd70f092ce59144d81f8924a844de05ba8f5
   - name: python3-pytz
     buildsystem: simple
     build-commands:
@@ -245,18 +263,30 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/c9/2f/0c4df4c5aa87b177e784d6ded44707c7d191cb11ddbc4d868082e7f4eecf/types_psutil-5.8.20-py3-none-any.whl
         sha256: b9c5d6c1f8bd6154f845a79dfbe46e7628f8d58978c6cadde0afa4abe6400294
+  - name: python3-tzdata
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "tzdata==2021.5" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/a5/3a/0d12fac5618ff5396095a139b9c77cad79b65ed78c58bf7162cd512f52d5/tzdata-2021.5-py2.py3-none-any.whl
+        sha256: 3eee491e22ebfe1e5cfcc97a4137cd70f092ce59144d81f8924a844de05ba8f5
   - name: python3-tzlocal
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "tzlocal==2.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "tzlocal==4.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d3/e3/d9f046b5d1c94a3aeab15f1f867aa414f8ee9d196fae6865f1d6a0ee1a0b/pytz-2021.3-py2.py3-none-any.whl
-        sha256: 3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c
+        url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
+        sha256: 8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6
       - type: file
-        url: https://files.pythonhosted.org/packages/5d/94/d47b0fd5988e6b7059de05720a646a2930920fff247a826f61674d436ba4/tzlocal-2.1-py2.py3-none-any.whl
-        sha256: e2cb6c6b5b604af38597403e9852872d7f534962ae2954c7f35efcb1ccacf4a4
+        url: https://files.pythonhosted.org/packages/ac/29/0daef8da885f35b3c8a54ac45378d4829a7f787ec55475b541bed3df6a36/tzlocal-4.1-py3-none-any.whl
+        sha256: 28ba8d9fcb6c9a782d6e0078b4f6627af1ea26aeaa32b4eab5324abc7df4149f
+      - type: file
+        url: https://files.pythonhosted.org/packages/a5/3a/0d12fac5618ff5396095a139b9c77cad79b65ed78c58bf7162cd512f52d5/tzdata-2021.5-py2.py3-none-any.whl
+        sha256: 3eee491e22ebfe1e5cfcc97a4137cd70f092ce59144d81f8924a844de05ba8f5
   - name: python3-matplotlib
     buildsystem: simple
     build-options:
