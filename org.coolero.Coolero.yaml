@@ -131,7 +131,9 @@ modules:
   - name: coolero
     buildsystem: simple
     build-commands:
-      - cp -r coolero /app/coolero
+      - mkdir -p /app/coolero
+      - cp -r coolero /app/coolero/coolero
+      - cp coolero.py /app/coolero/
       - mkdir -p /app/bin
       - install -Dm644 metadata/org.coolero.Coolero.png /app/share/icons/hicolor/scalable/apps/org.coolero.Coolero.png
       - install -Dm644 metadata/org.coolero.Coolero.desktop /app/share/applications/org.coolero.Coolero.desktop
@@ -141,6 +143,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/codifryed/coolero.git
-        tag: 0.7.2
-        commit: 758c308f2f6cf3128896d1eaa1b3d639d90be52b
+        tag: 0.8.0
+        commit: d4b4ad648a9381ab6fcdb581dc9a0ed27f882c07
         disable-submodules: true
