@@ -143,6 +143,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/codifryed/coolero.git
-        tag: 0.8.0
-        commit: d4b4ad648a9381ab6fcdb581dc9a0ed27f882c07
+        tag: 0.8.1
+        commit: a8632a6437d4211bdc541276d93d1a110961fa09
         disable-submodules: true

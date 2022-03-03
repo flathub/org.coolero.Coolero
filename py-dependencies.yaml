@@ -6,7 +6,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "apscheduler==3.9.0.post1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "apscheduler==3.9.1" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
@@ -18,8 +18,8 @@ modules:
         url: https://files.pythonhosted.org/packages/ac/29/0daef8da885f35b3c8a54ac45378d4829a7f787ec55475b541bed3df6a36/tzlocal-4.1-py3-none-any.whl
         sha256: 28ba8d9fcb6c9a782d6e0078b4f6627af1ea26aeaa32b4eab5324abc7df4149f
       - type: file
-        url: https://files.pythonhosted.org/packages/8e/b4/fadc940618942703712efc9bb33ea5ca784b16c080df9d0e889c542cbd13/APScheduler-3.9.0.post1-py2.py3-none-any.whl
-        sha256: f8a3e6e4d178de40fdbd5a3eefcc217588fc7f42f443e2335bb2dc29daf99357
+        url: https://files.pythonhosted.org/packages/e4/9f/c3937d4babe62504b874d4bf2c0d85aa69c7f59fa84cf6050f3b9dc5d83e/APScheduler-3.9.1-py2.py3-none-any.whl
+        sha256: ddc25a0ddd899de44d7f451f4375fb971887e65af51e41e5dcf681f59b8b2c9a
       - type: file
         url: https://files.pythonhosted.org/packages/a5/3a/0d12fac5618ff5396095a139b9c77cad79b65ed78c58bf7162cd512f52d5/tzdata-2021.5-py2.py3-none-any.whl
         sha256: 3eee491e22ebfe1e5cfcc97a4137cd70f092ce59144d81f8924a844de05ba8f5
