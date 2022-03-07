@@ -19,6 +19,7 @@ cleanup:
   - '*.la'
   - '*.a'
 modules:
+
   # embed the version of python we want to use (can remove once flatpak upgrades to 3.10)
   - name: python
     sources:
