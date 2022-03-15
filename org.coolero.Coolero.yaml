@@ -60,11 +60,22 @@ modules:
   - name: cppy
     buildsystem: simple
     build-commands:
-      - pip3 install --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} cppy
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} cppy --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/36/64/be592e84c443a70ea5dcfb1c30bfe6f10ba7d8eb05c2264c7ceca8498548/cppy-1.1.0.tar.gz
-        sha256: 4eda6f1952054a270f32dc11df7c5e24b259a09fddf7bfaa5f33df9fb4a29642
+        url: https://files.pythonhosted.org/packages/ae/5c/4a70144d254a9fb719de0504b6d24b5054aa179b7703afc7562dc81d8c44/cppy-1.2.0-py3-none-any.whl
+        sha256: 535cdb8da79a9cd19f60708abccea40466ad340f307e47fbc5e8fa45652638c3
+    modules:
+      - name: setuptools
+        buildsystem: simple
+        build-commands:
+          - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+            --prefix=${FLATPAK_DEST} setuptools --no-build-isolation
+        sources:
+          - type: file
+            url: https://files.pythonhosted.org/packages/14/74/54890935244ce053abcc4fa01ef4982a84743a8d128d4cf5eae56e2d156c/setuptools-60.9.3.tar.gz
+            sha256: 2347b2b432c891a863acadca2da9ac101eae6169b1d3dfee2ec605ecd50dbfe5
   - name: pyamdgpuinfo
     buildsystem: simple
     build-commands:
