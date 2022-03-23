@@ -18,6 +18,7 @@ deps:
 
 setup:
 	@flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	# The follow seems to fail when run with the 'make' user. run by hand in the terminal for now:
 	@flatpak install --system -y flathub org.flatpak.Builder org.kde.Sdk//6.2 org.kde.Platform//6.2 org.freedesktop.Sdk.Extension.llvm12//21.08
 
 build:

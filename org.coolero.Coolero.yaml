@@ -113,8 +113,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/qtproject/pyside-pyside-setup.git
-        tag: v6.2.3
-        commit: 1966aae5401de5129f571fdb5bb1d9b1e69ab143
+        branch: 6.2.4
+        commit: 4c7d937cc9740fe6e6f47c9bb59401519c39d860
   - name: pyside6
     buildsystem: cmake-ninja
     builddir: true
@@ -131,8 +131,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/qtproject/pyside-pyside-setup.git
-        tag: v6.2.3
-        commit: 1966aae5401de5129f571fdb5bb1d9b1e69ab143
+        branch: 6.2.4
+        commit: 4c7d937cc9740fe6e6f47c9bb59401519c39d860
       - type: shell
         commands:
           - mkdir -p /app/include/qt6tmp && cp -R /usr/include/Qt* /app/include/qt6tmp # https://bugreports.qt.io/broswse/PYSIDE-787
