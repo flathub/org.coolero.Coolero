@@ -18,7 +18,7 @@ deps:
 
 setup:
 	@flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-	@flatpak install --system -y flathub org.flatpak.Builder org.kde.Sdk//6.2 org.kde.Platform//6.2 org.freedesktop.Sdk.Extension.llvm12//21.08
+	@sudo flatpak install --system -y flathub org.flatpak.Builder org.kde.Sdk//6.2 org.kde.Platform//6.2 org.freedesktop.Sdk.Extension.llvm12//21.08
 
 build:
 	@flatpak run org.flatpak.Builder --force-clean --repo=$(REPO) $(BUILD) $(ID).yaml
@@ -28,7 +28,7 @@ bundle:
 	@flatpak build-bundle $(REPO) coolero.flatpak $(ID)
 
 install:
-	@flatpak install --system coolero.flatpak
+	@sudo flatpak install --system coolero.flatpak
 
 run:
 	@flatpak run $(ID) --debug
