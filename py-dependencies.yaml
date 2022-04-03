@@ -18,8 +18,8 @@ modules:
         url: https://files.pythonhosted.org/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl
         sha256: e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c
       - type: file
-        url: https://files.pythonhosted.org/packages/ac/29/0daef8da885f35b3c8a54ac45378d4829a7f787ec55475b541bed3df6a36/tzlocal-4.1-py3-none-any.whl
-        sha256: 28ba8d9fcb6c9a782d6e0078b4f6627af1ea26aeaa32b4eab5324abc7df4149f
+        url: https://files.pythonhosted.org/packages/31/b7/3bc2c1868f27677139b772e4fde95265b93151912fd90eb874827943bfcf/tzlocal-4.2-py3-none-any.whl
+        sha256: 89885494684c929d9191c57aa27502afc87a579be5cdd3225c77c463ea043745
       - type: file
         url: https://files.pythonhosted.org/packages/e4/9f/c3937d4babe62504b874d4bf2c0d85aa69c7f59fa84cf6050f3b9dc5d83e/APScheduler-3.9.1-py2.py3-none-any.whl
         sha256: ddc25a0ddd899de44d7f451f4375fb971887e65af51e41e5dcf681f59b8b2c9a
@@ -75,8 +75,8 @@ modules:
         --prefix=${FLATPAK_DEST} --no-build-isolation .
     sources:
       - type: archive
-        url: https://files.pythonhosted.org/packages/dc/aa/38708a1d85d13dec22e756feb4e02f8b3adc5937bfe976f8f998717ff0a3/hidapi-0.11.0.post2.tar.gz
-        sha256: da815e0d1d4b2ef1ebbcc85034572105dca29627eb61881337aa39010f2ef8cb
+        url: https://files.pythonhosted.org/packages/c0/36/1ae403d51262337de39bb026b2ccbe588668273c3361f5d49f0e2094f318/hidapi-0.11.2.tar.gz
+        sha256: c984b7ec2fc2ea987cd44cf06947e55572498ed2d43c64890b4ab58b29af72bc
       - type: shell
         commands:
           - sed -i 's|/usr/include/libusb-1.0|/app/include/libusb-1.0|' setup.py
@@ -84,20 +84,21 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "jeepney==0.7.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "jeepney==0.8.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/14/b8/bb3e34d71472140f9bfdf5d77cd063e2cc964b72b1bb0b70fe3c1e7db932/jeepney-0.7.1-py3-none-any.whl
-        sha256: 1b5a0ea5c0e7b166b2f5895b91a08c14de8915afda4407fb5022a195224958ac
+        url: https://files.pythonhosted.org/packages/ae/72/2a1e2290f1ab1e06f71f3d0f1646c9e4634e70e1d37491535e19266e8dc9/jeepney-0.8.0-py3-none-any.whl
+        sha256: c0a454ad016ca575060802ee4d590dd912e35c122fa04e70306de3d076cce755
   - name: python3-kiwisolver
     buildsystem: simple
     build-commands:
+      # legacy-resolver needed for kiwisolver
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "kiwisolver==1.4.0" --no-build-isolation --use-deprecated=legacy-resolver
+        --prefix=${FLATPAK_DEST} "kiwisolver==1.4.2" --no-build-isolation --use-deprecated=legacy-resolver
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/de/a8/8c5ed1845bfdcf753ac13c3c6368c16df20a8a8ee3c06e5114eca83b9f0b/kiwisolver-1.4.0.tar.gz
-        sha256: 7508b01e211178a85d21f1f87029846b77b2404a4c68cbd14748d4d4142fa3b8
+        url: https://files.pythonhosted.org/packages/2b/65/9eb6841880f6214f70e891a97ac945137bb6b2dd65ac35da219a752255fe/kiwisolver-1.4.2.tar.gz
+        sha256: 7f606d91b8a8816be476513a77fd30abe66227039bd6f8b406c348cb0247dcc9
   - name: python3-liquidctl
     buildsystem: simple
     build-commands:
@@ -120,8 +121,8 @@ modules:
         url: https://files.pythonhosted.org/packages/15/a8/4982498b2ab44d1fcd5c49f07ea3795eab01601dc143b009d333fcace3b9/pyusb-1.2.1-py3-none-any.whl
         sha256: 2b4c7cb86dbadf044dfb9d3a4ff69fd217013dbe78a792177a3feb172449ea36
       - type: file
-        url: https://files.pythonhosted.org/packages/dc/aa/38708a1d85d13dec22e756feb4e02f8b3adc5937bfe976f8f998717ff0a3/hidapi-0.11.0.post2.tar.gz
-        sha256: da815e0d1d4b2ef1ebbcc85034572105dca29627eb61881337aa39010f2ef8cb
+        url: https://files.pythonhosted.org/packages/c0/36/1ae403d51262337de39bb026b2ccbe588668273c3361f5d49f0e2094f318/hidapi-0.11.2.tar.gz
+        sha256: c984b7ec2fc2ea987cd44cf06947e55572498ed2d43c64890b4ab58b29af72bc
   - name: python3-numpy
     buildsystem: simple
     build-commands:
@@ -147,11 +148,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pillow==9.0.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pillow==9.1.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/03/a3/f61a9a7ff7969cdef2a6e0383a346eb327495d20d25a2de5a088dbb543a6/Pillow-9.0.1.tar.gz
-        sha256: 6c8bc8238a7dfdaf7a75f5ec5a663f4173f8c367e5a39f87e720495e1eed75fa
+        url: https://files.pythonhosted.org/packages/4b/83/090146d7871d90a2643d469c319c1d014e41b315ab5cf0f8b4b6a764ef31/Pillow-9.1.0.tar.gz
+        sha256: f401ed2bbb155e1ade150ccc63db1a4f6c1909d3d378f7d1235a44e90d75fb97
   - name: python3-psutil
     buildsystem: simple
     build-commands:
@@ -276,7 +277,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "tzlocal==4.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "tzlocal==4.2" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/89/2d/49329ebec33b14dae61ecc8c85abe596341832fa36c4bcd3d99fddda018b/tzdata-2022.1-py2.py3-none-any.whl
@@ -285,8 +286,8 @@ modules:
         url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
         sha256: 8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6
       - type: file
-        url: https://files.pythonhosted.org/packages/ac/29/0daef8da885f35b3c8a54ac45378d4829a7f787ec55475b541bed3df6a36/tzlocal-4.1-py3-none-any.whl
-        sha256: 28ba8d9fcb6c9a782d6e0078b4f6627af1ea26aeaa32b4eab5324abc7df4149f
+        url: https://files.pythonhosted.org/packages/31/b7/3bc2c1868f27677139b772e4fde95265b93151912fd90eb874827943bfcf/tzlocal-4.2-py3-none-any.whl
+        sha256: 89885494684c929d9191c57aa27502afc87a579be5cdd3225c77c463ea043745
   - name: python3-matplotlib
     buildsystem: simple
     build-options:
