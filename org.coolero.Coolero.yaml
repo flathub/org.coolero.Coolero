@@ -23,8 +23,8 @@ modules:
   - name: python
     sources:
       - type: archive
-        url: https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tar.xz
-        md5: 14e8c22458ed7779a1957b26cde01db9
+        url: https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tar.xz
+        md5: 21f2e113e087083a1e8cf10553d93599
   # automatically added python deps needed for own version:
   - name: cython
     buildsystem: simple
