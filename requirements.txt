@@ -3,7 +3,7 @@ colorama==0.4.4; python_version >= "3.6" and python_full_version < "3.0.0" and s
 colorlog==6.6.0; python_version >= "3.6"
 cycler==0.11.0; python_version >= "3.7"
 docopt==0.6.2
-fonttools==4.31.2; python_version >= "3.7"
+fonttools==4.33.3; python_version >= "3.7"
 hidapi==0.11.2
 jeepney==0.8.0; python_version >= "3.7"
 kiwisolver==1.4.2; python_version >= "3.7"
@@ -15,18 +15,18 @@ packaging==21.3; python_version >= "3.7"
 pillow==9.1.0; python_version >= "3.7"
 psutil==5.9.0; (python_version >= "2.6" and python_full_version < "3.0.0") or (python_full_version >= "3.4.0")
 # pyamdgpuinfo==2.1.2
-pyparsing==3.0.7; python_version >= "3.7"
-# pyside6==6.2.4; python_version >= "3.6" and python_version < "3.11"
+pyparsing==3.0.8; python_full_version >= "3.6.8" and python_version >= "3.7"
+# pyside6-essentials==6.3.0; python_version >= "3.6" and python_version < "3.11"
 python-dateutil==2.8.2; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.3.0" and python_version >= "3.7"
 pytz-deprecation-shim==0.1.0.post0; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.6.0" and python_version < "4" and python_version >= "3.6"
 pytz==2022.1; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version < "4"
 pyusb==1.2.1; python_full_version >= "3.6.0"
-setproctitle==1.2.2; python_version >= "3.6"
+setproctitle==1.2.3; python_version >= "3.6"
 setuptools-scm==6.4.2; python_version >= "3.7"
-# shiboken6==6.2.4; python_version >= "3.6" and python_version < "3.11"
+# shiboken6==6.3.0; python_version >= "3.6" and python_version < "3.11"
 six==1.16.0; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version < "4" and python_version >= "3.7"
 smbus==1.1.post2; sys_platform == "linux"
 tomli==2.0.1; python_version >= "3.7"
-types-psutil==5.8.20
+types-psutil==5.8.22
 tzdata==2022.1; python_version >= "3.6" and python_full_version < "3.0.0" and platform_system == "Windows" or python_full_version >= "3.6.0" and python_version < "4" and python_version >= "3.6" and platform_system == "Windows"
 tzlocal==4.2; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version < "4" and python_version >= "3.6"

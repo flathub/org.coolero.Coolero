@@ -23,8 +23,8 @@ modules:
   - name: python
     sources:
       - type: archive
-        url: https://www.python.org/ftp/python/3.10.2/Python-3.10.2.tar.xz
-        md5: 14e8c22458ed7779a1957b26cde01db9
+        url: https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tar.xz
+        md5: 21f2e113e087083a1e8cf10553d93599
   # automatically added python deps needed for own version:
   - name: cython
     buildsystem: simple
@@ -103,41 +103,64 @@ modules:
 
   - py-dependencies.yaml
 
-  - name: shiboken6
-    buildsystem: simple
-    build-options:
-      prepend-path: /usr/lib/sdk/llvm12/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm12/lib
-    build-commands:
-      - python3 setup.py install --verbose-build --skip-docs --build-type=shiboken6 --prefix=${FLATPAK_DEST}
-    sources:
-      - type: git
-        url: https://github.com/qtproject/pyside-pyside-setup.git
-        branch: 6.2.4
-        commit: 4c7d937cc9740fe6e6f47c9bb59401519c39d860
   - name: pyside6
-    buildsystem: cmake-ninja
-    builddir: true
-    build-options:
-      prepend-path: /usr/lib/sdk/llvm12/bin
-      prepend-ld-library-path: /usr/lib/sdk/llvm12/lib
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DBUILD_TESTS=OFF
-      - -DCMAKE_SKIP_RPATH:BOOL=YES
-      - -DPYTHON_EXECUTABLE=/app/bin/python3
-      - -DPYTHON_LIBRARY=/app/lib/libpython3.10.a
-      - -DPYTHON_INCLUDE_DIR=/app/include/python3.10
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} pyside6_essentials --no-build-isolation
+    only-arches:
+      - x86_64
     sources:
-      - type: git
-        url: https://github.com/qtproject/pyside-pyside-setup.git
-        branch: 6.2.4
-        commit: 4c7d937cc9740fe6e6f47c9bb59401519c39d860
-      - type: shell
-        commands:
-          - mkdir -p /app/include/qt6tmp && cp -R /usr/include/Qt* /app/include/qt6tmp # https://bugreports.qt.io/broswse/PYSIDE-787
-          - sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake
-          - sed -i 's|<signature_p.h>|<signature/signature_p.h>|' sources/pyside6/libpyside/feature_select.cpp # fixes build issue introduced in 6.2.2
+      - type: file
+        url: https://files.pythonhosted.org/packages/49/4b/c0c4febd2b1e75934025cddc1cd75bcefb4f940356edb5759384cd4e8db2/PySide6_Essentials-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl
+        sha256: a486abe04be6270da798eae9c78b40f605008f19d5d9c880b1683783c715882d
+    modules:
+      - name: shiboken6
+        buildsystem: simple
+        build-commands:
+          - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+            --prefix=${FLATPAK_DEST} shiboken6 --no-build-isolation
+        sources:
+          - type: file
+            url: https://files.pythonhosted.org/packages/d0/99/1745b375e7bd6cce0d2a5bad43a8b1d48aa474f36e257b0d44f17e3d32f5/shiboken6-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl
+            sha256: e68e3cbb595c3047c4d893b84ef88eb5b23dea4e94241e80f5509dcb6613ad3d
+
+# previous build, no longer working with current version
+#  - name: shiboken6
+#    buildsystem: simple
+#    build-options:
+#      prepend-path: /usr/lib/sdk/llvm12/bin
+#      prepend-ld-library-path: /usr/lib/sdk/llvm12/lib
+#    build-commands:
+#      - python3 setup.py install --verbose-build --skip-docs --build-type=shiboken6 --prefix=${FLATPAK_DEST}
+#    sources:
+#      - type: git
+#        url: https://github.com/qtproject/pyside-pyside-setup.git
+#        branch: 6.2.4
+#        commit: 4c7d937cc9740fe6e6f47c9bb59401519c39d860
+#  - name: pyside6
+#    buildsystem: cmake-ninja
+#    builddir: true
+#    build-options:
+#      prepend-path: /usr/lib/sdk/llvm12/bin
+#      prepend-ld-library-path: /usr/lib/sdk/llvm12/lib
+#    config-opts:
+#      - -DCMAKE_BUILD_TYPE=Release
+#      - -DBUILD_TESTS=OFF
+#      - -DCMAKE_SKIP_RPATH:BOOL=YES
+#      - -DPYTHON_EXECUTABLE=/app/bin/python3
+#      - -DPYTHON_LIBRARY=/app/lib/libpython3.10.a
+#      - -DPYTHON_INCLUDE_DIR=/app/include/python3.10
+#    sources:
+#      - type: git
+#        url: https://github.com/qtproject/pyside-pyside-setup.git
+#        branch: 6.2.4
+#        commit: 4c7d937cc9740fe6e6f47c9bb59401519c39d860
+#      - type: shell
+#        commands:
+#          - mkdir -p /app/include/qt6tmp && cp -R /usr/include/Qt* /app/include/qt6tmp # https://bugreports.qt.io/broswse/PYSIDE-787
+#          - sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake
+#          - sed -i 's|<signature_p.h>|<signature/signature_p.h>|' sources/pyside6/libpyside/feature_select.cpp # fixes build issue introduced in 6.2.2
 
   - name: coolero
     buildsystem: simple
@@ -154,6 +177,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/codifryed/coolero.git
-        tag: 0.9.0
-        commit: e0a71a6d246ac42f9298bb40ed9ea59085f396f1
+        tag: 0.10.0
+        commit: ece48f43c9dd24aa25e7c2dfbc0cd843b00a2d14
         disable-submodules: true
