@@ -295,7 +295,7 @@ modules:
         MPLSETUPCFG: /run/build/python3-matplotlib/mplsetup.cfg
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "matplotlib==3.5.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "matplotlib==3.5.2" --no-build-isolation
     sources:
       - type: inline
         dest-filename: mplsetup.cfg
@@ -314,8 +314,8 @@ modules:
         url: https://files.pythonhosted.org/packages/d9/41/d9cfb4410589805cd787f8a82cddd13142d9bf7449d12adf2d05a4a7d633/pyparsing-3.0.8-py3-none-any.whl
         sha256: ef7b523f6356f763771559412c0d7134753f037822dad1b16945b7b846f7ad06
       - type: file
-        url: https://files.pythonhosted.org/packages/8a/46/425a44ab9a71afd2f2c8a78b039c1af8ec21e370047f0ad6e43ca819788e/matplotlib-3.5.1.tar.gz
-        sha256: b2e9810e09c3a47b73ce9cab5a72243a1258f61e7900969097a817232246ce1c
+        url: https://files.pythonhosted.org/packages/2f/be/7d6e073a3eb740ebeba43a69f5de2b141fea50b801e24e0ae024ac94d4ac/matplotlib-3.5.2.tar.gz
+        sha256: 48cf850ce14fa18067f2d9e0d646763681948487a8080ec0af2686468b4607a2
       - type: file
         url: https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl
         sha256: 961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9
