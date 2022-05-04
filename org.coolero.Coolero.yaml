@@ -177,7 +177,7 @@ modules:
       - ln -s /app/coolero/coolero.py /app/bin/coolero
     sources:
       - type: git
-        url: https://gitlab.com/codifryed/coolero.git
+        url: https://gitlab.com/coolero/coolero.git
         tag: 0.10.1
         commit: 453ea9f5159c3a595ab9e6d69853509395a4aef3
         disable-submodules: true
