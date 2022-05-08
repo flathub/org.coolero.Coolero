@@ -126,7 +126,7 @@ modules:
             url: https://files.pythonhosted.org/packages/d0/99/1745b375e7bd6cce0d2a5bad43a8b1d48aa474f36e257b0d44f17e3d32f5/shiboken6-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl
             sha256: e68e3cbb595c3047c4d893b84ef88eb5b23dea4e94241e80f5509dcb6613ad3d
 
-# previous build, no longer working with current version
+# previous build, took a long time and no longer working with current version of PySide
 #  - name: shiboken6
 #    buildsystem: simple
 #    build-options:
@@ -178,6 +178,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/coolero/coolero.git
-        tag: 0.10.1
-        commit: 453ea9f5159c3a595ab9e6d69853509395a4aef3
+        tag: 0.10.2
+        commit: 49c03bef186b508f470cdafb98247a5d8003061c
         disable-submodules: true
