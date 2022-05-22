@@ -10,7 +10,7 @@ kiwisolver==1.4.2; python_version >= "3.7"
 # libusb-package==1.0.25.0; sys_platform == "win32" and python_version >= "3.6" or sys_platform == "cygwin" and python_version >= "3.6"
 liquidctl==1.9.1
 matplotlib==3.5.2; python_version >= "3.7"
-numpy==1.22.3; python_version >= "3.8"
+numpy==1.22.4; python_version >= "3.8"
 packaging==21.3; python_version >= "3.7"
 pillow==9.1.1; python_version >= "3.7"
 psutil==5.9.1; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.4.0")
