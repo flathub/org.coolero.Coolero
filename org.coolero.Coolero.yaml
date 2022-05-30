@@ -31,11 +31,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "cython==0.29.28" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "cython==0.29.30" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/9f/79/311cfbca90332ab37ef8ea08f1af3266f20a9a0e7a1d652842db832226bb/Cython-0.29.28-py2.py3-none-any.whl
-        sha256: 26d8d0ededca42be50e0ac377c08408e18802b1391caa3aea045a72c1bff47ac
+        url: https://files.pythonhosted.org/packages/80/08/1c007f1d571f8f2a67ed6938cc79117fa5ae9c0d9ff633fbd5e52f212062/Cython-0.29.30-py2.py3-none-any.whl
+        sha256: acb72e0b42079862cf2f894964b41f261e941e75677e902c5f4304b3eb00af33
   - name: wheel
     buildsystem: simple
     build-commands:
@@ -178,6 +178,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/coolero/coolero.git
-        tag: 0.10.3
-        commit: 4dcd2836e8645de336f1523665ad918082842ca6
+        tag: 0.11.0
+        commit: 1611b0d34e1c49d2fcd1f8edfc627b87eecf41e2
         disable-submodules: true
