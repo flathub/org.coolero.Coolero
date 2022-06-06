@@ -75,8 +75,8 @@ modules:
         --prefix=${FLATPAK_DEST} --no-build-isolation .
     sources:
       - type: archive
-        url: https://files.pythonhosted.org/packages/c0/36/1ae403d51262337de39bb026b2ccbe588668273c3361f5d49f0e2094f318/hidapi-0.11.2.tar.gz
-        sha256: c984b7ec2fc2ea987cd44cf06947e55572498ed2d43c64890b4ab58b29af72bc
+        url: https://files.pythonhosted.org/packages/be/6c/2294b664bb3b56c48e0a35c5b4db42f3e62405ee694f1c750cbce214663a/hidapi-0.12.0.tar.gz
+        sha256: 593c1e87ea9f9c878ffeef61bcac8f1b2dfdfe0266ec3dbbc99ac45e32449cc6
       - type: shell
         commands:
           - sed -i 's|/usr/include/libusb-1.0|/app/include/libusb-1.0|' setup.py
@@ -121,8 +121,8 @@ modules:
         url: https://files.pythonhosted.org/packages/15/a8/4982498b2ab44d1fcd5c49f07ea3795eab01601dc143b009d333fcace3b9/pyusb-1.2.1-py3-none-any.whl
         sha256: 2b4c7cb86dbadf044dfb9d3a4ff69fd217013dbe78a792177a3feb172449ea36
       - type: file
-        url: https://files.pythonhosted.org/packages/c0/36/1ae403d51262337de39bb026b2ccbe588668273c3361f5d49f0e2094f318/hidapi-0.11.2.tar.gz
-        sha256: c984b7ec2fc2ea987cd44cf06947e55572498ed2d43c64890b4ab58b29af72bc
+        url: https://files.pythonhosted.org/packages/be/6c/2294b664bb3b56c48e0a35c5b4db42f3e62405ee694f1c750cbce214663a/hidapi-0.12.0.tar.gz
+        sha256: 593c1e87ea9f9c878ffeef61bcac8f1b2dfdfe0266ec3dbbc99ac45e32449cc6
   - name: python3-numpy
     buildsystem: simple
     build-commands:
@@ -259,11 +259,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "types-psutil==5.8.22" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "types-psutil==5.8.23" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/9f/b5/e9a236cd07ce8852a064713e67a4df2412f0b8ea234584cdf6d70c397ba1/types_psutil-5.8.22-py3-none-any.whl
-        sha256: aa98bb5e1b702a70902172e69083a8e00802b6a7d7f03e2c7ba736b92919b8c6
+        url: https://files.pythonhosted.org/packages/ed/0b/15e5fe14e3305d901397288a5cf5c8fa21eb1184a6c3644f41ff4f9fb734/types_psutil-5.8.23-py3-none-any.whl
+        sha256: e4beaf154a59f9a750ba9716dbbdb2efec43aaf40a15b6af25443ae57a590941
   - name: python3-tzdata
     buildsystem: simple
     build-commands:
