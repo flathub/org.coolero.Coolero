@@ -114,8 +114,8 @@ modules:
       - x86_64
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/49/4b/c0c4febd2b1e75934025cddc1cd75bcefb4f940356edb5759384cd4e8db2/PySide6_Essentials-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl
-        sha256: a486abe04be6270da798eae9c78b40f605008f19d5d9c880b1683783c715882d
+        url: https://files.pythonhosted.org/packages/4c/a1/0562e98d39347530af4b03327bf66dde4a51f2420b64b8e6bfde005d6e70/PySide6_Essentials-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl
+        sha256: e27962beb2cc45fe13a1a1c24a454c3c3c3c3082c4a84bc5dcf6b306979ba013
     modules:
       - name: shiboken6
         buildsystem: simple
@@ -124,8 +124,8 @@ modules:
             --prefix=${FLATPAK_DEST} shiboken6 --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/d0/99/1745b375e7bd6cce0d2a5bad43a8b1d48aa474f36e257b0d44f17e3d32f5/shiboken6-6.3.0-cp36-abi3-manylinux_2_28_x86_64.whl
-            sha256: e68e3cbb595c3047c4d893b84ef88eb5b23dea4e94241e80f5509dcb6613ad3d
+            url: https://files.pythonhosted.org/packages/10/5b/f7b2b492bfeaf9cefce98a1e31b75af0cf316b7988f634ef824bd58d7d00/shiboken6-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl
+            sha256: aad9aa8e7ecd3c889cc789e41abf3990101126b5b02edfcf87f1ef331c9dc45a
 
 # previous build, took a long time and no longer working with current version of PySide
 #  - name: shiboken6
