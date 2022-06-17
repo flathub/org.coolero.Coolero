@@ -27,11 +27,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "colorama==0.4.4" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "colorama==0.4.5" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl
-        sha256: 9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2
+        url: https://files.pythonhosted.org/packages/77/8b/7550e87b2d308a1b711725dfaddc19c695f8c5fa413c640b2be01662f4e6/colorama-0.4.5-py2.py3-none-any.whl
+        sha256: 854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da
   - name: python3-colorlog
     buildsystem: simple
     build-commands:
@@ -75,8 +75,8 @@ modules:
         --prefix=${FLATPAK_DEST} --no-build-isolation .
     sources:
       - type: archive
-        url: https://files.pythonhosted.org/packages/be/6c/2294b664bb3b56c48e0a35c5b4db42f3e62405ee694f1c750cbce214663a/hidapi-0.12.0.tar.gz
-        sha256: 593c1e87ea9f9c878ffeef61bcac8f1b2dfdfe0266ec3dbbc99ac45e32449cc6
+        url: https://files.pythonhosted.org/packages/ef/72/54273f701c737ae5f42d9c0adf641912d20eb955c75433f1093fa509bcc7/hidapi-0.12.0.post2.tar.gz
+        sha256: 8ebb2117be8b27af5c780936030148e1971b6b7fda06e0581ff0bfb15e94ed76
       - type: shell
         commands:
           - sed -i 's|/usr/include/libusb-1.0|/app/include/libusb-1.0|' setup.py
@@ -94,11 +94,11 @@ modules:
     build-commands:
       # legacy-resolver needed for kiwisolver
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "kiwisolver==1.4.2" --no-build-isolation --use-deprecated=legacy-resolver
+        --prefix=${FLATPAK_DEST} "kiwisolver==1.4.3" --no-build-isolation --use-deprecated=legacy-resolver
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/2b/65/9eb6841880f6214f70e891a97ac945137bb6b2dd65ac35da219a752255fe/kiwisolver-1.4.2.tar.gz
-        sha256: 7f606d91b8a8816be476513a77fd30abe66227039bd6f8b406c348cb0247dcc9
+        url: https://files.pythonhosted.org/packages/85/30/28df42dda1abe08eb2ff70a76c4dc04ffc9a0200a7c244300da436709a37/kiwisolver-1.4.3.tar.gz
+        sha256: ab8a15c2750ae8d53e31f77a94f846d0a00772240f1c12817411fa2344351f86
   - name: python3-liquidctl
     buildsystem: simple
     build-commands:
@@ -121,8 +121,8 @@ modules:
         url: https://files.pythonhosted.org/packages/15/a8/4982498b2ab44d1fcd5c49f07ea3795eab01601dc143b009d333fcace3b9/pyusb-1.2.1-py3-none-any.whl
         sha256: 2b4c7cb86dbadf044dfb9d3a4ff69fd217013dbe78a792177a3feb172449ea36
       - type: file
-        url: https://files.pythonhosted.org/packages/be/6c/2294b664bb3b56c48e0a35c5b4db42f3e62405ee694f1c750cbce214663a/hidapi-0.12.0.tar.gz
-        sha256: 593c1e87ea9f9c878ffeef61bcac8f1b2dfdfe0266ec3dbbc99ac45e32449cc6
+        url: https://files.pythonhosted.org/packages/ef/72/54273f701c737ae5f42d9c0adf641912d20eb955c75433f1093fa509bcc7/hidapi-0.12.0.post2.tar.gz
+        sha256: 8ebb2117be8b27af5c780936030148e1971b6b7fda06e0581ff0bfb15e94ed76
   - name: python3-numpy
     buildsystem: simple
     build-commands:
@@ -325,6 +325,7 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/2f/85/2f6e42fb4b537b9998835410578fb1973175b81691e9a82ab6668cf64b0b/fonttools-4.33.3-py3-none-any.whl
         sha256: f829c579a8678fa939a1d9e9894d01941db869de44390adb49ce67055a06cc2a
+      # older kiwisolver needed as newer versions have incorrect metadata
       - type: file
         url: https://files.pythonhosted.org/packages/de/a8/8c5ed1845bfdcf753ac13c3c6368c16df20a8a8ee3c06e5114eca83b9f0b/kiwisolver-1.4.0.tar.gz
         sha256: 7508b01e211178a85d21f1f87029846b77b2404a4c68cbd14748d4d4142fa3b8
