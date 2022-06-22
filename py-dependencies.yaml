@@ -223,8 +223,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "setuptools-scm==6.4.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "setuptools-scm==7.0.2" --no-build-isolation
     sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/75/e1/932e06004039dd670c9d5e1df0cd606bf46e29a28e65d5bb28e894ea29c9/typing_extensions-4.2.0-py3-none-any.whl
+        sha256: 6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708
       - type: file
         url: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
         sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
@@ -235,8 +238,8 @@ modules:
         url: https://files.pythonhosted.org/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl
         sha256: ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
       - type: file
-        url: https://files.pythonhosted.org/packages/e3/e5/c28b544051340e63e0d507eb893c9513d3a300e5e9183e2990518acbfe36/setuptools_scm-6.4.2-py3-none-any.whl
-        sha256: acea13255093849de7ccb11af9e1fb8bde7067783450cee9ef7a93139bddf6d4
+        url: https://files.pythonhosted.org/packages/1a/dd/b83708410d912a56e6aa1f78ac1135465eb6a5cfe494628ae24e7dc5922f/setuptools_scm-7.0.2-py3-none-any.whl
+        sha256: ec120c99027a785c7a349667480a5b2100dfc7d5063e545c93f3735508945aef
   - name: python3-smbus
     buildsystem: simple
     build-commands:
@@ -264,6 +267,15 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/ed/0b/15e5fe14e3305d901397288a5cf5c8fa21eb1184a6c3644f41ff4f9fb734/types_psutil-5.8.23-py3-none-any.whl
         sha256: e4beaf154a59f9a750ba9716dbbdb2efec43aaf40a15b6af25443ae57a590941
+  - name: python3-typing-extensions
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "typing-extensions==4.2.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/75/e1/932e06004039dd670c9d5e1df0cd606bf46e29a28e65d5bb28e894ea29c9/typing_extensions-4.2.0-py3-none-any.whl
+        sha256: 6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708
   - name: python3-tzdata
     buildsystem: simple
     build-commands:
@@ -295,7 +307,7 @@ modules:
         MPLSETUPCFG: /run/build/python3-matplotlib/mplsetup.cfg
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "matplotlib==3.5.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "matplotlib==3.5.2" --no-build-isolation --use-deprecated=legacy-resolver
     sources:
       - type: inline
         dest-filename: mplsetup.cfg
@@ -346,11 +358,11 @@ modules:
       - name: setuptools_scm_git_archive
         buildsystem: simple
         build-commands:
-          - pip3 install --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} setuptools_scm_git_archive --no-build-isolation
+          - pip3 install --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} setuptools_scm_git_archive --no-build-isolation  --use-deprecated=legacy-resolver
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/7e/2c/0c15b29a1b5940250bfdc4a4f53272e35cd7cf8a34159291b6b4ec9eb291/setuptools_scm_git_archive-1.1.tar.gz
-            sha256: 6026f61089b73fa1b5ee737e95314f41cb512609b393530385ed281d0b46c062
+            url: https://files.pythonhosted.org/packages/78/a2/aee5edbf18bbd5dd6b90a762e54d15182bc840e8ac34fc1993f99795ebe7/setuptools_scm_git_archive-1.2.tar.gz
+            sha256: 92e8149c1f4a62fe170962b4ff8cb3d53bfa90fc944f1f1758cebaef56a67f13
       - name: certifi
         buildsystem: simple
         build-commands:
