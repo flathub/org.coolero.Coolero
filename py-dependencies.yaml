@@ -27,11 +27,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "colorama==0.4.4" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "colorama==0.4.5" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/44/98/5b86278fbbf250d239ae0ecb724f8572af1c91f4a11edf4d36a206189440/colorama-0.4.4-py2.py3-none-any.whl
-        sha256: 9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2
+        url: https://files.pythonhosted.org/packages/77/8b/7550e87b2d308a1b711725dfaddc19c695f8c5fa413c640b2be01662f4e6/colorama-0.4.5-py2.py3-none-any.whl
+        sha256: 854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da
   - name: python3-colorlog
     buildsystem: simple
     build-commands:
@@ -75,8 +75,8 @@ modules:
         --prefix=${FLATPAK_DEST} --no-build-isolation .
     sources:
       - type: archive
-        url: https://files.pythonhosted.org/packages/c0/36/1ae403d51262337de39bb026b2ccbe588668273c3361f5d49f0e2094f318/hidapi-0.11.2.tar.gz
-        sha256: c984b7ec2fc2ea987cd44cf06947e55572498ed2d43c64890b4ab58b29af72bc
+        url: https://files.pythonhosted.org/packages/ef/72/54273f701c737ae5f42d9c0adf641912d20eb955c75433f1093fa509bcc7/hidapi-0.12.0.post2.tar.gz
+        sha256: 8ebb2117be8b27af5c780936030148e1971b6b7fda06e0581ff0bfb15e94ed76
       - type: shell
         commands:
           - sed -i 's|/usr/include/libusb-1.0|/app/include/libusb-1.0|' setup.py
@@ -94,11 +94,11 @@ modules:
     build-commands:
       # legacy-resolver needed for kiwisolver
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "kiwisolver==1.4.2" --no-build-isolation --use-deprecated=legacy-resolver
+        --prefix=${FLATPAK_DEST} "kiwisolver==1.4.3" --no-build-isolation --use-deprecated=legacy-resolver
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/2b/65/9eb6841880f6214f70e891a97ac945137bb6b2dd65ac35da219a752255fe/kiwisolver-1.4.2.tar.gz
-        sha256: 7f606d91b8a8816be476513a77fd30abe66227039bd6f8b406c348cb0247dcc9
+        url: https://files.pythonhosted.org/packages/85/30/28df42dda1abe08eb2ff70a76c4dc04ffc9a0200a7c244300da436709a37/kiwisolver-1.4.3.tar.gz
+        sha256: ab8a15c2750ae8d53e31f77a94f846d0a00772240f1c12817411fa2344351f86
   - name: python3-liquidctl
     buildsystem: simple
     build-commands:
@@ -121,8 +121,8 @@ modules:
         url: https://files.pythonhosted.org/packages/15/a8/4982498b2ab44d1fcd5c49f07ea3795eab01601dc143b009d333fcace3b9/pyusb-1.2.1-py3-none-any.whl
         sha256: 2b4c7cb86dbadf044dfb9d3a4ff69fd217013dbe78a792177a3feb172449ea36
       - type: file
-        url: https://files.pythonhosted.org/packages/c0/36/1ae403d51262337de39bb026b2ccbe588668273c3361f5d49f0e2094f318/hidapi-0.11.2.tar.gz
-        sha256: c984b7ec2fc2ea987cd44cf06947e55572498ed2d43c64890b4ab58b29af72bc
+        url: https://files.pythonhosted.org/packages/ef/72/54273f701c737ae5f42d9c0adf641912d20eb955c75433f1093fa509bcc7/hidapi-0.12.0.post2.tar.gz
+        sha256: 8ebb2117be8b27af5c780936030148e1971b6b7fda06e0581ff0bfb15e94ed76
   - name: python3-numpy
     buildsystem: simple
     build-commands:
@@ -223,8 +223,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "setuptools-scm==6.4.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "setuptools-scm==7.0.2" --no-build-isolation
     sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/75/e1/932e06004039dd670c9d5e1df0cd606bf46e29a28e65d5bb28e894ea29c9/typing_extensions-4.2.0-py3-none-any.whl
+        sha256: 6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708
       - type: file
         url: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
         sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
@@ -235,8 +238,8 @@ modules:
         url: https://files.pythonhosted.org/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl
         sha256: ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
       - type: file
-        url: https://files.pythonhosted.org/packages/e3/e5/c28b544051340e63e0d507eb893c9513d3a300e5e9183e2990518acbfe36/setuptools_scm-6.4.2-py3-none-any.whl
-        sha256: acea13255093849de7ccb11af9e1fb8bde7067783450cee9ef7a93139bddf6d4
+        url: https://files.pythonhosted.org/packages/1a/dd/b83708410d912a56e6aa1f78ac1135465eb6a5cfe494628ae24e7dc5922f/setuptools_scm-7.0.2-py3-none-any.whl
+        sha256: ec120c99027a785c7a349667480a5b2100dfc7d5063e545c93f3735508945aef
   - name: python3-smbus
     buildsystem: simple
     build-commands:
@@ -259,11 +262,20 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "types-psutil==5.8.22" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "types-psutil==5.8.23" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/9f/b5/e9a236cd07ce8852a064713e67a4df2412f0b8ea234584cdf6d70c397ba1/types_psutil-5.8.22-py3-none-any.whl
-        sha256: aa98bb5e1b702a70902172e69083a8e00802b6a7d7f03e2c7ba736b92919b8c6
+        url: https://files.pythonhosted.org/packages/ed/0b/15e5fe14e3305d901397288a5cf5c8fa21eb1184a6c3644f41ff4f9fb734/types_psutil-5.8.23-py3-none-any.whl
+        sha256: e4beaf154a59f9a750ba9716dbbdb2efec43aaf40a15b6af25443ae57a590941
+  - name: python3-typing-extensions
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "typing-extensions==4.2.0" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/75/e1/932e06004039dd670c9d5e1df0cd606bf46e29a28e65d5bb28e894ea29c9/typing_extensions-4.2.0-py3-none-any.whl
+        sha256: 6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708
   - name: python3-tzdata
     buildsystem: simple
     build-commands:
@@ -295,7 +307,7 @@ modules:
         MPLSETUPCFG: /run/build/python3-matplotlib/mplsetup.cfg
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "matplotlib==3.5.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "matplotlib==3.5.2" --no-build-isolation --use-deprecated=legacy-resolver
     sources:
       - type: inline
         dest-filename: mplsetup.cfg
@@ -325,6 +337,7 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/2f/85/2f6e42fb4b537b9998835410578fb1973175b81691e9a82ab6668cf64b0b/fonttools-4.33.3-py3-none-any.whl
         sha256: f829c579a8678fa939a1d9e9894d01941db869de44390adb49ce67055a06cc2a
+      # older kiwisolver needed as newer versions have incorrect metadata
       - type: file
         url: https://files.pythonhosted.org/packages/de/a8/8c5ed1845bfdcf753ac13c3c6368c16df20a8a8ee3c06e5114eca83b9f0b/kiwisolver-1.4.0.tar.gz
         sha256: 7508b01e211178a85d21f1f87029846b77b2404a4c68cbd14748d4d4142fa3b8
@@ -345,11 +358,11 @@ modules:
       - name: setuptools_scm_git_archive
         buildsystem: simple
         build-commands:
-          - pip3 install --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} setuptools_scm_git_archive --no-build-isolation
+          - pip3 install --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} setuptools_scm_git_archive --no-build-isolation  --use-deprecated=legacy-resolver
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/7e/2c/0c15b29a1b5940250bfdc4a4f53272e35cd7cf8a34159291b6b4ec9eb291/setuptools_scm_git_archive-1.1.tar.gz
-            sha256: 6026f61089b73fa1b5ee737e95314f41cb512609b393530385ed281d0b46c062
+            url: https://files.pythonhosted.org/packages/78/a2/aee5edbf18bbd5dd6b90a762e54d15182bc840e8ac34fc1993f99795ebe7/setuptools_scm_git_archive-1.2.tar.gz
+            sha256: 92e8149c1f4a62fe170962b4ff8cb3d53bfa90fc944f1f1758cebaef56a67f13
       - name: certifi
         buildsystem: simple
         build-commands:
