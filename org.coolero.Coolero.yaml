@@ -126,43 +126,6 @@ modules:
             url: https://files.pythonhosted.org/packages/10/5b/f7b2b492bfeaf9cefce98a1e31b75af0cf316b7988f634ef824bd58d7d00/shiboken6-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl
             sha256: aad9aa8e7ecd3c889cc789e41abf3990101126b5b02edfcf87f1ef331c9dc45a
 
-# previous build, took a long time and no longer working with current version of PySide
-#  - name: shiboken6
-#    buildsystem: simple
-#    build-options:
-#      prepend-path: /usr/lib/sdk/llvm12/bin
-#      prepend-ld-library-path: /usr/lib/sdk/llvm12/lib
-#    build-commands:
-#      - python3 setup.py install --verbose-build --skip-docs --build-type=shiboken6 --prefix=${FLATPAK_DEST}
-#    sources:
-#      - type: git
-#        url: https://github.com/qtproject/pyside-pyside-setup.git
-#        branch: 6.2.4
-#        commit: 4c7d937cc9740fe6e6f47c9bb59401519c39d860
-#  - name: pyside6
-#    buildsystem: cmake-ninja
-#    builddir: true
-#    build-options:
-#      prepend-path: /usr/lib/sdk/llvm12/bin
-#      prepend-ld-library-path: /usr/lib/sdk/llvm12/lib
-#    config-opts:
-#      - -DCMAKE_BUILD_TYPE=Release
-#      - -DBUILD_TESTS=OFF
-#      - -DCMAKE_SKIP_RPATH:BOOL=YES
-#      - -DPYTHON_EXECUTABLE=/app/bin/python3
-#      - -DPYTHON_LIBRARY=/app/lib/libpython3.10.a
-#      - -DPYTHON_INCLUDE_DIR=/app/include/python3.10
-#    sources:
-#      - type: git
-#        url: https://github.com/qtproject/pyside-pyside-setup.git
-#        branch: 6.2.4
-#        commit: 4c7d937cc9740fe6e6f47c9bb59401519c39d860
-#      - type: shell
-#        commands:
-#          - mkdir -p /app/include/qt6tmp && cp -R /usr/include/Qt* /app/include/qt6tmp # https://bugreports.qt.io/broswse/PYSIDE-787
-#          - sed -i 's|--include-paths=|--include-paths=/app/include/qt6tmp:|' sources/pyside6/cmake/Macros/PySideModules.cmake
-#          - sed -i 's|<signature_p.h>|<signature/signature_p.h>|' sources/pyside6/libpyside/feature_select.cpp # fixes build issue introduced in 6.2.2
-
   - name: coolero
     buildsystem: simple
     build-commands:
@@ -178,6 +141,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/coolero/coolero.git
-        tag: 0.12.0
-        commit: f1bace11be5997b7ed9cf1b3da79fdc027a3c4b3
+        tag: 0.12.1
+        commit: bc9c5b6223427300c70a4b2b1f72efcfc132b232
         disable-submodules: true
