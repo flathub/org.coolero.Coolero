@@ -63,11 +63,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "fonttools==4.33.3" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "fonttools==4.34.4" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/2f/85/2f6e42fb4b537b9998835410578fb1973175b81691e9a82ab6668cf64b0b/fonttools-4.33.3-py3-none-any.whl
-        sha256: f829c579a8678fa939a1d9e9894d01941db869de44390adb49ce67055a06cc2a
+        url: https://files.pythonhosted.org/packages/ad/27/094dd5d09d3a57f7a5f27414ae5c1405bae1164922f1bb61fd8a748e8f65/fonttools-4.34.4-py3-none-any.whl
+        sha256: d73f25b283cd8033367451122aa868a23de0734757a01984e4b30b18b9050c72
   - name: python3-hidapi
     buildsystem: simple
     build-commands:
@@ -148,11 +148,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pillow==9.1.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pillow==9.2.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/43/6e/59853546226ee6200f9ba6e574d11604b60ad0754d2cbd1c8f3246b70418/Pillow-9.1.1.tar.gz
-        sha256: 7502539939b53d7565f3d11d87c78e7ec900d3c72945d4ee0e2f250d598309a0
+        url: https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz
+        sha256: 75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04
   - name: python3-psutil
     buildsystem: simple
     build-commands:
@@ -223,23 +223,23 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "setuptools-scm==7.0.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "setuptools-scm==7.0.4" --no-build-isolation
     sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/75/e1/932e06004039dd670c9d5e1df0cd606bf46e29a28e65d5bb28e894ea29c9/typing_extensions-4.2.0-py3-none-any.whl
-        sha256: 6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708
-      - type: file
-        url: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
-        sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
       - type: file
         url: https://files.pythonhosted.org/packages/6c/10/a7d0fa5baea8fe7b50f448ab742f26f52b80bfca85ac2be9d35cdd9a3246/pyparsing-3.0.9-py3-none-any.whl
         sha256: 5026bae9a10eeaefb61dab2f09052b9f4307d44aee4eda64b309723d8d206bbc
       - type: file
+        url: https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl
+        sha256: 25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02
+      - type: file
+        url: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
+        sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
+      - type: file
         url: https://files.pythonhosted.org/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl
         sha256: ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
       - type: file
-        url: https://files.pythonhosted.org/packages/1a/dd/b83708410d912a56e6aa1f78ac1135465eb6a5cfe494628ae24e7dc5922f/setuptools_scm-7.0.2-py3-none-any.whl
-        sha256: ec120c99027a785c7a349667480a5b2100dfc7d5063e545c93f3735508945aef
+        url: https://files.pythonhosted.org/packages/1e/6a/2f64fde612daa7c0cdc22e30da5b609a0f67640e5f2f4d08215677090a58/setuptools_scm-7.0.4-py3-none-any.whl
+        sha256: 53a6f51451a84d891ca485cec700a802413bbc5e76ee65da134e54c733a6e44d
   - name: python3-smbus
     buildsystem: simple
     build-commands:
@@ -271,11 +271,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "typing-extensions==4.2.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "typing-extensions==4.3.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/75/e1/932e06004039dd670c9d5e1df0cd606bf46e29a28e65d5bb28e894ea29c9/typing_extensions-4.2.0-py3-none-any.whl
-        sha256: 6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708
+        url: https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl
+        sha256: 25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02
   - name: python3-tzdata
     buildsystem: simple
     build-commands:
@@ -317,8 +317,8 @@ modules:
           system_freetype = True
           system_qhull = True
       - type: file
-        url: https://files.pythonhosted.org/packages/43/6e/59853546226ee6200f9ba6e574d11604b60ad0754d2cbd1c8f3246b70418/Pillow-9.1.1.tar.gz
-        sha256: 7502539939b53d7565f3d11d87c78e7ec900d3c72945d4ee0e2f250d598309a0
+        url: https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz
+        sha256: 75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04
       - type: file
         url: https://files.pythonhosted.org/packages/5c/f9/695d6bedebd747e5eb0fe8fad57b72fdf25411273a39791cde838d5a8f51/cycler-0.11.0-py3-none-any.whl
         sha256: 3a27e95f763a428a739d2add979fa7494c912a32c17c4c38c4d5f082cad165a3
@@ -335,8 +335,8 @@ modules:
         url: https://files.pythonhosted.org/packages/03/c6/14a17e10813b8db20d1e800ff9a3a898e65d25f2b0e9d6a94616f1e3362c/numpy-1.23.0.tar.gz
         sha256: bd3fa4fe2e38533d5336e1272fc4e765cabbbde144309ccee8675509d5cd7b05
       - type: file
-        url: https://files.pythonhosted.org/packages/2f/85/2f6e42fb4b537b9998835410578fb1973175b81691e9a82ab6668cf64b0b/fonttools-4.33.3-py3-none-any.whl
-        sha256: f829c579a8678fa939a1d9e9894d01941db869de44390adb49ce67055a06cc2a
+        url: https://files.pythonhosted.org/packages/ad/27/094dd5d09d3a57f7a5f27414ae5c1405bae1164922f1bb61fd8a748e8f65/fonttools-4.34.4-py3-none-any.whl
+        sha256: d73f25b283cd8033367451122aa868a23de0734757a01984e4b30b18b9050c72
       # older kiwisolver needed as newer versions have incorrect metadata
       - type: file
         url: https://files.pythonhosted.org/packages/de/a8/8c5ed1845bfdcf753ac13c3c6368c16df20a8a8ee3c06e5114eca83b9f0b/kiwisolver-1.4.0.tar.gz
