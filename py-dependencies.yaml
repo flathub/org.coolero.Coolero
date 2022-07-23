@@ -262,11 +262,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "types-psutil==5.9.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "types-psutil==5.9.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/e2/10/4e13615ccd13fb234cb4369ce855c09e227dcd046349c9b2baebb55898cc/types_psutil-5.9.1-py3-none-any.whl
-        sha256: dc628917044747f6803ea1a6bde48599394aeda98ce4b9203e18fc8022e8b881
+        url: https://files.pythonhosted.org/packages/ed/0c/f7216bedb6c3508e28f3d223dd9c58683f08007861d8643d408a1bb50196/types_psutil-5.9.2-py3-none-any.whl
+        sha256: b4c7794f0156d25d2b8134e8627694c695e5b82c4a199d707f69cb5ff72daad9
   - name: python3-typing-extensions
     buildsystem: simple
     build-commands:
