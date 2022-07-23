@@ -94,11 +94,11 @@ modules:
     build-commands:
       # legacy-resolver needed for kiwisolver
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "kiwisolver==1.4.3" --no-build-isolation --use-deprecated=legacy-resolver
+        --prefix=${FLATPAK_DEST} "kiwisolver==1.4.4" --no-build-isolation --use-deprecated=legacy-resolver
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/85/30/28df42dda1abe08eb2ff70a76c4dc04ffc9a0200a7c244300da436709a37/kiwisolver-1.4.3.tar.gz
-        sha256: ab8a15c2750ae8d53e31f77a94f846d0a00772240f1c12817411fa2344351f86
+        url: https://files.pythonhosted.org/packages/5f/5c/272a7dd49a1914f35cd8d6d9f386defa8b047f6fbd06badd6b77b3ba24e7/kiwisolver-1.4.4.tar.gz
+        sha256: d41997519fcba4a1e46eb4a2fe31bc12f0ff957b2b81bac28db24744f333e955
   - name: python3-liquidctl
     buildsystem: simple
     build-commands:
@@ -223,7 +223,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "setuptools-scm==7.0.4" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "setuptools-scm==7.0.5" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/6c/10/a7d0fa5baea8fe7b50f448ab742f26f52b80bfca85ac2be9d35cdd9a3246/pyparsing-3.0.9-py3-none-any.whl
@@ -238,8 +238,8 @@ modules:
         url: https://files.pythonhosted.org/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl
         sha256: ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
       - type: file
-        url: https://files.pythonhosted.org/packages/1e/6a/2f64fde612daa7c0cdc22e30da5b609a0f67640e5f2f4d08215677090a58/setuptools_scm-7.0.4-py3-none-any.whl
-        sha256: 53a6f51451a84d891ca485cec700a802413bbc5e76ee65da134e54c733a6e44d
+        url: https://files.pythonhosted.org/packages/01/ed/75a20e7b075e8ecb1f84e8debf833917905d8790b78008915bd68dddd5c4/setuptools_scm-7.0.5-py3-none-any.whl
+        sha256: 7930f720905e03ccd1e1d821db521bff7ec2ac9cf0ceb6552dd73d24a45d3b02
   - name: python3-smbus
     buildsystem: simple
     build-commands:
