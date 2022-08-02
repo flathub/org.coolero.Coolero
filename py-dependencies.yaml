@@ -214,11 +214,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "setproctitle==1.2.3" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "setproctitle==1.3.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/78/9a/cf6bf4c472b59aef3f3c0184233eeea8938d3366bcdd93d525261b1b9e0a/setproctitle-1.2.3.tar.gz
-        sha256: ecf28b1c07a799d76f4326e508157b71aeda07b84b90368ea451c0710dbd32c0
+        url: https://files.pythonhosted.org/packages/39/c8/d97b2903e728672e810b528ac144e996d7e116eb63cb7d2f9d66301b4905/setproctitle-1.3.0.tar.gz
+        sha256: ff0facafbe4e4e3b336814ffee99e41b4d6065f512cf5616e0a1bf689aca2af6
   - name: python3-setuptools-scm
     buildsystem: simple
     build-commands:
@@ -262,11 +262,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "types-psutil==5.9.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "types-psutil==5.9.3" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ed/0c/f7216bedb6c3508e28f3d223dd9c58683f08007861d8643d408a1bb50196/types_psutil-5.9.2-py3-none-any.whl
-        sha256: b4c7794f0156d25d2b8134e8627694c695e5b82c4a199d707f69cb5ff72daad9
+        url: https://files.pythonhosted.org/packages/c6/8b/3107b1f8270dfd265b3839c89bcd25ddd2251a7ca469887ea58a3847db94/types_psutil-5.9.3-py3-none-any.whl
+        sha256: e9d47d696074057ae16bed6e08f5468add697a84864f9ffaa77e5a86a9bf42c1
   - name: python3-typing-extensions
     buildsystem: simple
     build-commands:
