@@ -27,7 +27,7 @@ setuptools-scm==7.0.5; python_version >= "3.7"
 six==1.16.0; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version < "4" and python_version >= "3.7"
 smbus==1.1.post2; sys_platform == "linux"
 tomli==2.0.1; python_version >= "3.7"
-types-psutil==5.9.3
+types-psutil==5.9.5
 typing-extensions==4.3.0; python_version >= "3.7"
 tzdata==2022.1; python_version >= "3.6" and python_full_version < "3.0.0" and platform_system == "Windows" or python_full_version >= "3.6.0" and python_version < "4" and python_version >= "3.6" and platform_system == "Windows"
 tzlocal==4.2; python_version >= "3.6" and python_full_version < "3.0.0" or python_full_version >= "3.5.0" and python_version < "4" and python_version >= "3.6"
