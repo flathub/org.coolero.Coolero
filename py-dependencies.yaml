@@ -63,11 +63,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "fonttools==4.34.4" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "fonttools==4.37.1" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ad/27/094dd5d09d3a57f7a5f27414ae5c1405bae1164922f1bb61fd8a748e8f65/fonttools-4.34.4-py3-none-any.whl
-        sha256: d73f25b283cd8033367451122aa868a23de0734757a01984e4b30b18b9050c72
+        url: https://files.pythonhosted.org/packages/99/e2/90421047dfd94ed78064b41345d63985c576dc98b7c87bec92a1a8cb88e5/fonttools-4.37.1-py3-none-any.whl
+        sha256: fff6b752e326c15756c819fe2fe7ceab69f96a1dbcfe8911d0941cdb49905007
   - name: python3-hidapi
     buildsystem: simple
     build-commands:
@@ -127,11 +127,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "numpy==1.23.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "numpy==1.23.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/13/b1/0c22aa7ca1deda4915cdec9562f839546bb252eecf6ad596eaec0592bd35/numpy-1.23.1.tar.gz
-        sha256: d748ef349bfef2e1194b59da37ed5a29c19ea8d7e6342019921ba2ba4fd8b624
+        url: https://files.pythonhosted.org/packages/f4/66/17b8e95770478436bf968353c89683ce6f9e14d92e0d4fb3111c09ba18d2/numpy-1.23.2.tar.gz
+        sha256: b78d00e48261fbbd04aa0d7427cf78d18401ee0abd89c7559bbf422e5b1c7d01
   - name: python3-packaging
     buildsystem: simple
     build-commands:
@@ -320,11 +320,11 @@ modules:
         url: https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl
         sha256: 961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9
       - type: file
-        url: https://files.pythonhosted.org/packages/13/b1/0c22aa7ca1deda4915cdec9562f839546bb252eecf6ad596eaec0592bd35/numpy-1.23.1.tar.gz
-        sha256: d748ef349bfef2e1194b59da37ed5a29c19ea8d7e6342019921ba2ba4fd8b624
+        url: https://files.pythonhosted.org/packages/f4/66/17b8e95770478436bf968353c89683ce6f9e14d92e0d4fb3111c09ba18d2/numpy-1.23.2.tar.gz
+        sha256: b78d00e48261fbbd04aa0d7427cf78d18401ee0abd89c7559bbf422e5b1c7d01
       - type: file
-        url: https://files.pythonhosted.org/packages/ad/27/094dd5d09d3a57f7a5f27414ae5c1405bae1164922f1bb61fd8a748e8f65/fonttools-4.34.4-py3-none-any.whl
-        sha256: d73f25b283cd8033367451122aa868a23de0734757a01984e4b30b18b9050c72
+        url: https://files.pythonhosted.org/packages/99/e2/90421047dfd94ed78064b41345d63985c576dc98b7c87bec92a1a8cb88e5/fonttools-4.37.1-py3-none-any.whl
+        sha256: fff6b752e326c15756c819fe2fe7ceab69f96a1dbcfe8911d0941cdb49905007
       # older kiwisolver needed as newer versions have incorrect metadata
       - type: file
         url: https://files.pythonhosted.org/packages/de/a8/8c5ed1845bfdcf753ac13c3c6368c16df20a8a8ee3c06e5114eca83b9f0b/kiwisolver-1.4.0.tar.gz
