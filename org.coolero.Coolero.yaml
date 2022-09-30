@@ -76,8 +76,8 @@ modules:
             --prefix=${FLATPAK_DEST} setuptools --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/14/74/54890935244ce053abcc4fa01ef4982a84743a8d128d4cf5eae56e2d156c/setuptools-60.9.3.tar.gz
-            sha256: 2347b2b432c891a863acadca2da9ac101eae6169b1d3dfee2ec605ecd50dbfe5
+            url: https://files.pythonhosted.org/packages/03/c9/7b050ea4cc4144d0328f15e0b43c839e759c6c639370a3b932ecf4c6358f/setuptools-65.4.1.tar.gz
+            sha256: 3050e338e5871e70c72983072fe34f6032ae1cdeeeb67338199c2f74e083a80e
   - name: pyamdgpuinfo
     buildsystem: simple
     build-commands:
@@ -114,8 +114,8 @@ modules:
       - x86_64
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/4c/a1/0562e98d39347530af4b03327bf66dde4a51f2420b64b8e6bfde005d6e70/PySide6_Essentials-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl
-        sha256: e27962beb2cc45fe13a1a1c24a454c3c3c3c3082c4a84bc5dcf6b306979ba013
+        url: https://files.pythonhosted.org/packages/73/c7/3d50c6c5aedea89891378913816710ce1787b73244a5229fe02bb4df1c9b/PySide6_Essentials-6.3.2-cp36-abi3-manylinux_2_28_x86_64.whl
+        sha256: a5d6528a0e7bcf4c7b892210f5ee34fdf2cb95ecddfafa1eb77509d924bcbbf1
     modules:
       - name: shiboken6
         buildsystem: simple
@@ -124,8 +124,8 @@ modules:
             --prefix=${FLATPAK_DEST} shiboken6 --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/10/5b/f7b2b492bfeaf9cefce98a1e31b75af0cf316b7988f634ef824bd58d7d00/shiboken6-6.3.1-cp36-abi3-manylinux_2_28_x86_64.whl
-            sha256: aad9aa8e7ecd3c889cc789e41abf3990101126b5b02edfcf87f1ef331c9dc45a
+            url: https://files.pythonhosted.org/packages/da/b7/ced7a41f2a7eb2b0f8ae4aa48233d74375d0e433351cc11c96f4224f2d29/shiboken6-6.3.2-cp36-abi3-manylinux_2_28_x86_64.whl
+            sha256: e242361886679cde47c4cb367f2e3124274201ca8bf01049235861d032666320
 
   - name: coolero
     buildsystem: simple
@@ -142,6 +142,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/coolero/coolero.git
-        tag: 0.12.8
-        commit: 7b2663fbd4044c1d1b342e4d7d857a7a49d9a52c
+        tag: 0.12.9
+        commit: 59b334f66b4dbd2c51781cd95d2f478d24711ec6
         disable-submodules: true
