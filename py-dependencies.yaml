@@ -41,6 +41,15 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/58/43/a363c213224448f9e194d626221123ce00e3fb3d87c0c22aed52b620bdd1/colorlog-6.7.0-py2.py3-none-any.whl
         sha256: 0d33ca236784a1ba3ff9c532d4964126d8a2c44f1f0cb1d2b0728196f512f662
+  - name: python3-crcmod
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "crcmod==1.7" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/6b/b0/e595ce2a2527e169c3bcd6c33d2473c1918e0b7f6826a043ca1245dd4e5b/crcmod-1.7.tar.gz
+        sha256: dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e
   - name: python3-cycler
     buildsystem: simple
     build-commands:
@@ -196,11 +205,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pytz==2022.2.1" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pytz==2022.4" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d5/50/54451e88e3da4616286029a3a17fc377de817f66a0f50e1faaee90161724/pytz-2022.2.1-py2.py3-none-any.whl
-        sha256: 220f481bdafa09c3955dfbdddb7b57780e9a94f5127e35456a48589b9e0c0197
+        url: https://files.pythonhosted.org/packages/d8/66/309545413162bc8271c73e622499a41cdc37217b499febe26155ff9f93ed/pytz-2022.4-py2.py3-none-any.whl
+        sha256: 2c0784747071402c6e99f0bafdb7da0fa22645f06554c7ae06bf6358897e9c91
   - name: python3-pyusb
     buildsystem: simple
     build-commands:
