@@ -142,6 +142,6 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/coolero/coolero.git
-        tag: 0.12.9
-        commit: 59b334f66b4dbd2c51781cd95d2f478d24711ec6
+        tag: 0.13.0
+        commit: 464dec3d1d46b5b2d9a85d4720f3a3512238c0d0
         disable-submodules: true
