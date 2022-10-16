@@ -21,8 +21,8 @@ modules:
         url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
         sha256: 8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6
       - type: file
-        url: https://files.pythonhosted.org/packages/d3/67/f13ffb2e4758c47a1a644eab3ac996c99d0c0b93a66c9b05d2ea9446b46d/tzdata-2022.4-py2.py3-none-any.whl
-        sha256: 74da81ecf2b3887c94e53fc1d466d4362aaf8b26fc87cda18f22004544694583
+        url: https://files.pythonhosted.org/packages/d5/90/80d787eab0971e22903c8b89cff7891b21adef174aa6434d1a04f9b5ba35/tzdata-2022.5-py2.py3-none-any.whl
+        sha256: 323161b22b7802fdc78f20ca5f6073639c64f1a7227c40cd3e19fd1d0ce6650a
   - name: python3-colorama
     buildsystem: simple
     build-commands:
@@ -112,17 +112,23 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "liquidctl==1.10.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "liquidctl==1.11.0" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ad/cc/3d2304f14c033e588cbd2c2abe65bd3f114f54c704ce1126057e08e3c582/liquidctl-1.10.0-py3-none-any.whl
-        sha256: acc65602e598dabca94f91b067ac7ad7f4d2920653b91d694ad421be6eaef172
+        url: https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz
+        sha256: 75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04
+      - type: file
+        url: https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz
+        sha256: 49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491
       - type: file
         url: https://files.pythonhosted.org/packages/58/43/a363c213224448f9e194d626221123ce00e3fb3d87c0c22aed52b620bdd1/colorlog-6.7.0-py2.py3-none-any.whl
         sha256: 0d33ca236784a1ba3ff9c532d4964126d8a2c44f1f0cb1d2b0728196f512f662
       - type: file
-        url: https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz
-        sha256: 49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491
+        url: https://files.pythonhosted.org/packages/6b/b0/e595ce2a2527e169c3bcd6c33d2473c1918e0b7f6826a043ca1245dd4e5b/crcmod-1.7.tar.gz
+        sha256: dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e
+      - type: file
+        url: https://files.pythonhosted.org/packages/09/e5/5a895f03dc9b52f4dafdbfdda7b5c64b10201fc30d11ca0ab34ea9a97645/liquidctl-1.11.0-py3-none-any.whl
+        sha256: 0c59dac7bdc09d7a16da410060154dca86258d989308034a919242a4739ca8f3
       - type: file
         url: https://files.pythonhosted.org/packages/ef/72/54273f701c737ae5f42d9c0adf641912d20eb955c75433f1093fa509bcc7/hidapi-0.12.0.post2.tar.gz
         sha256: 8ebb2117be8b27af5c780936030148e1971b6b7fda06e0581ff0bfb15e94ed76
@@ -136,11 +142,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "numpy==1.23.3" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "numpy==1.23.4" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/0a/88/f4f0c7a982efdf7bf22f283acf6009b29a9cc5835b684a49f8d3a4adb22f/numpy-1.23.3.tar.gz
-        sha256: 51bf49c0cd1d52be0a240aa66f3458afc4b95d8993d2d04f0d91fa60c10af6cd
+        url: https://files.pythonhosted.org/packages/64/8e/9929b64e146d240507edaac2185cd5516f00b133be5b39250d253be25a64/numpy-1.23.4.tar.gz
+        sha256: ed2cc92af0efad20198638c69bb0fc2870a58dabfba6eb722c933b48556c686c
   - name: python3-packaging
     buildsystem: simple
     build-commands:
@@ -148,11 +154,11 @@ modules:
         --prefix=${FLATPAK_DEST} "packaging==21.3" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl
-        sha256: ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
-      - type: file
         url: https://files.pythonhosted.org/packages/6c/10/a7d0fa5baea8fe7b50f448ab742f26f52b80bfca85ac2be9d35cdd9a3246/pyparsing-3.0.9-py3-none-any.whl
         sha256: 5026bae9a10eeaefb61dab2f09052b9f4307d44aee4eda64b309723d8d206bbc
+      - type: file
+        url: https://files.pythonhosted.org/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl
+        sha256: ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
   - name: python3-pillow
     buildsystem: simple
     build-commands:
@@ -196,11 +202,11 @@ modules:
         --prefix=${FLATPAK_DEST} "pytz-deprecation-shim==0.1.0.post0" --no-build-isolation
     sources:
       - type: file
+        url: https://files.pythonhosted.org/packages/d5/90/80d787eab0971e22903c8b89cff7891b21adef174aa6434d1a04f9b5ba35/tzdata-2022.5-py2.py3-none-any.whl
+        sha256: 323161b22b7802fdc78f20ca5f6073639c64f1a7227c40cd3e19fd1d0ce6650a
+      - type: file
         url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
         sha256: 8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6
-      - type: file
-        url: https://files.pythonhosted.org/packages/d3/67/f13ffb2e4758c47a1a644eab3ac996c99d0c0b93a66c9b05d2ea9446b46d/tzdata-2022.4-py2.py3-none-any.whl
-        sha256: 74da81ecf2b3887c94e53fc1d466d4362aaf8b26fc87cda18f22004544694583
   - name: python3-pytz
     buildsystem: simple
     build-commands:
@@ -271,11 +277,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "types-psutil==5.9.5" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "types-psutil==5.9.5.2" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/57/6f/98c3d1902899416baf63cd403a8de6f6cabbfe7f28d993dc7c0c55219579/types_psutil-5.9.5-py3-none-any.whl
-        sha256: c188ec98cadbc6d96f4b03e4c1e920195c51590923e7f928be3a6d5810a1d356
+        url: https://files.pythonhosted.org/packages/c8/ed/28364c11229929b3a68f6566a0f7c3e6f49dc7615b1e790e017961ed98cb/types_psutil-5.9.5.2-py3-none-any.whl
+        sha256: 3c89fc3c7111bf5d87998a28ffcd7cdb3906acf17dfd8d61eee719af42e61604
   - name: python3-typing-extensions
     buildsystem: simple
     build-commands:
@@ -289,11 +295,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "tzdata==2022.4" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "tzdata==2022.5" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d3/67/f13ffb2e4758c47a1a644eab3ac996c99d0c0b93a66c9b05d2ea9446b46d/tzdata-2022.4-py2.py3-none-any.whl
-        sha256: 74da81ecf2b3887c94e53fc1d466d4362aaf8b26fc87cda18f22004544694583
+        url: https://files.pythonhosted.org/packages/d5/90/80d787eab0971e22903c8b89cff7891b21adef174aa6434d1a04f9b5ba35/tzdata-2022.5-py2.py3-none-any.whl
+        sha256: 323161b22b7802fdc78f20ca5f6073639c64f1a7227c40cd3e19fd1d0ce6650a
   - name: python3-tzlocal
     buildsystem: simple
     build-commands:
@@ -307,8 +313,8 @@ modules:
         url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
         sha256: 8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6
       - type: file
-        url: https://files.pythonhosted.org/packages/d3/67/f13ffb2e4758c47a1a644eab3ac996c99d0c0b93a66c9b05d2ea9446b46d/tzdata-2022.4-py2.py3-none-any.whl
-        sha256: 74da81ecf2b3887c94e53fc1d466d4362aaf8b26fc87cda18f22004544694583
+        url: https://files.pythonhosted.org/packages/d5/90/80d787eab0971e22903c8b89cff7891b21adef174aa6434d1a04f9b5ba35/tzdata-2022.5-py2.py3-none-any.whl
+        sha256: 323161b22b7802fdc78f20ca5f6073639c64f1a7227c40cd3e19fd1d0ce6650a
   - name: python3-contourpy
     buildsystem: simple
     build-commands:
@@ -319,8 +325,8 @@ modules:
         url: https://files.pythonhosted.org/packages/38/b3/d6fd43ab2eadce72ac089328d80e9cdf274efdb79a9933aaf52ef1621e99/contourpy-1.0.5.tar.gz
         sha256: 896631cd40222aef3697e4e51177d14c3709fda49d30983269d584f034acc8a4
       - type: file
-        url: https://files.pythonhosted.org/packages/0a/88/f4f0c7a982efdf7bf22f283acf6009b29a9cc5835b684a49f8d3a4adb22f/numpy-1.23.3.tar.gz
-        sha256: 51bf49c0cd1d52be0a240aa66f3458afc4b95d8993d2d04f0d91fa60c10af6cd
+        url: https://files.pythonhosted.org/packages/64/8e/9929b64e146d240507edaac2185cd5516f00b133be5b39250d253be25a64/numpy-1.23.4.tar.gz
+        sha256: ed2cc92af0efad20198638c69bb0fc2870a58dabfba6eb722c933b48556c686c
     modules:
       # extra needed dep
       - name: pybind11
