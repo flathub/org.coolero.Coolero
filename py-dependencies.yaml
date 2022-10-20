@@ -15,8 +15,8 @@ modules:
         url: https://files.pythonhosted.org/packages/31/b7/3bc2c1868f27677139b772e4fde95265b93151912fd90eb874827943bfcf/tzlocal-4.2-py3-none-any.whl
         sha256: 89885494684c929d9191c57aa27502afc87a579be5cdd3225c77c463ea043745
       - type: file
-        url: https://files.pythonhosted.org/packages/d5/50/54451e88e3da4616286029a3a17fc377de817f66a0f50e1faaee90161724/pytz-2022.2.1-py2.py3-none-any.whl
-        sha256: 220f481bdafa09c3955dfbdddb7b57780e9a94f5127e35456a48589b9e0c0197
+        url: https://files.pythonhosted.org/packages/b5/d7/91fd8911d22e7fac794803095dd192bf1ebd70c7603272085230d915e738/pytz-2022.5-py2.py3-none-any.whl
+        sha256: 335ab46900b1465e714b4fda4963d87363264eb662aab5e65da039c25f1f5b22
       - type: file
         url: https://files.pythonhosted.org/packages/eb/73/3eaab547ca809754e67e06871cff0fc962bafd4b604e15f31896a0f94431/pytz_deprecation_shim-0.1.0.post0-py2.py3-none-any.whl
         sha256: 8314c9692a636c8eb3bda879b9f119e350e93223ae83e70e80c31675a0fdc1a6
@@ -112,7 +112,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "liquidctl==1.11.0" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "liquidctl==1.11.1" --no-build-isolation
     sources:
       - type: file
         url: https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz
@@ -127,8 +127,8 @@ modules:
         url: https://files.pythonhosted.org/packages/6b/b0/e595ce2a2527e169c3bcd6c33d2473c1918e0b7f6826a043ca1245dd4e5b/crcmod-1.7.tar.gz
         sha256: dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e
       - type: file
-        url: https://files.pythonhosted.org/packages/09/e5/5a895f03dc9b52f4dafdbfdda7b5c64b10201fc30d11ca0ab34ea9a97645/liquidctl-1.11.0-py3-none-any.whl
-        sha256: 0c59dac7bdc09d7a16da410060154dca86258d989308034a919242a4739ca8f3
+        url: https://files.pythonhosted.org/packages/4b/31/826ecfa61c7d1dce24b38b9cb51e21a2adfd848e05f26873290b54ef3ace/liquidctl-1.11.1-py3-none-any.whl
+        sha256: 629d6e7db0eab3d6e7d0a58c23be6765d169eb2c1d29ddaef2fde60c603429e9
       - type: file
         url: https://files.pythonhosted.org/packages/ef/72/54273f701c737ae5f42d9c0adf641912d20eb955c75433f1093fa509bcc7/hidapi-0.12.0.post2.tar.gz
         sha256: 8ebb2117be8b27af5c780936030148e1971b6b7fda06e0581ff0bfb15e94ed76
@@ -172,11 +172,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "psutil==5.9.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "psutil==5.9.3" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/8f/57/828ac1f70badc691a716e77bfae258ef5db76bb7830109bf4bcf882de020/psutil-5.9.2.tar.gz
-        sha256: feb861a10b6c3bb00701063b37e4afc754f8217f0f09c42280586bd6ac712b5c
+        url: https://files.pythonhosted.org/packages/de/eb/1c01a34c86ee3b058c556e407ce5b07cb7d186ebe47b3e69d6f152ca5cc5/psutil-5.9.3.tar.gz
+        sha256: 7ccfcdfea4fc4b0a02ca2c31de7fcd186beb9cff8207800e14ab66f79c773af6
   - name: python3-pyparsing
     buildsystem: simple
     build-commands:
@@ -211,11 +211,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "pytz==2022.4" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "pytz==2022.5" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/d8/66/309545413162bc8271c73e622499a41cdc37217b499febe26155ff9f93ed/pytz-2022.4-py2.py3-none-any.whl
-        sha256: 2c0784747071402c6e99f0bafdb7da0fa22645f06554c7ae06bf6358897e9c91
+        url: https://files.pythonhosted.org/packages/b5/d7/91fd8911d22e7fac794803095dd192bf1ebd70c7603272085230d915e738/pytz-2022.5-py2.py3-none-any.whl
+        sha256: 335ab46900b1465e714b4fda4963d87363264eb662aab5e65da039c25f1f5b22
   - name: python3-pyusb
     buildsystem: simple
     build-commands:
@@ -277,11 +277,11 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "types-psutil==5.9.5.2" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "types-psutil==5.9.5.4" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/c8/ed/28364c11229929b3a68f6566a0f7c3e6f49dc7615b1e790e017961ed98cb/types_psutil-5.9.5.2-py3-none-any.whl
-        sha256: 3c89fc3c7111bf5d87998a28ffcd7cdb3906acf17dfd8d61eee719af42e61604
+        url: https://files.pythonhosted.org/packages/68/20/122287c83e84fb19421fad1c203a3710146f8d73f25f45cf210d48e59c2c/types_psutil-5.9.5.4-py3-none-any.whl
+        sha256: 28e59764630187e462d43788efa16d59d5e77b510115f9e25901b2d4007fca62
   - name: python3-typing-extensions
     buildsystem: simple
     build-commands:
