@@ -336,7 +336,7 @@ modules:
         MPLSETUPCFG: /run/build/python3-matplotlib/mplsetup.cfg
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "matplotlib==3.6.0" --no-build-isolation --use-deprecated=legacy-resolver
+        --prefix=${FLATPAK_DEST} "matplotlib==3.6.2" --no-build-isolation --use-deprecated=legacy-resolver
     sources:
       - type: inline
         dest-filename: mplsetup.cfg
@@ -346,8 +346,8 @@ modules:
           system_freetype = True
           system_qhull = True
       - type: file
-        url: https://files.pythonhosted.org/packages/69/e6/c36374904b757c8193a44af789ddf5bc27f2fe5fbd0cdd908f09cb21e2e1/matplotlib-3.6.0.tar.gz
-        sha256: c5108ebe67da60a9204497d8d403316228deb52b550388190c53a57394d41531
+        url: https://files.pythonhosted.org/packages/91/1c/a48fd779287df3425c289cc2ff728980a5b355f15f4c3c40e1822770ba44/matplotlib-3.6.2.tar.gz
+        sha256: b03fd10a1709d0101c054883b550f7c4c5e974f751e2680318759af005964990
       - type: file
         url: https://files.pythonhosted.org/packages/8f/4f/8a5789867f2a928fd9b32e7e8d4bc0f27a765aa7056989e7427f2c2a1966/contourpy-1.0.6.tar.gz
         sha256: 6e459ebb8bb5ee4c22c19cc000174f8059981971a33ce11e17dddf6aca97a142
@@ -364,11 +364,11 @@ modules:
         url: https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl
         sha256: 961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9
       - type: file
-        url: https://files.pythonhosted.org/packages/0a/88/f4f0c7a982efdf7bf22f283acf6009b29a9cc5835b684a49f8d3a4adb22f/numpy-1.23.3.tar.gz
-        sha256: 51bf49c0cd1d52be0a240aa66f3458afc4b95d8993d2d04f0d91fa60c10af6cd
+        url: https://files.pythonhosted.org/packages/64/8e/9929b64e146d240507edaac2185cd5516f00b133be5b39250d253be25a64/numpy-1.23.4.tar.gz
+        sha256: ed2cc92af0efad20198638c69bb0fc2870a58dabfba6eb722c933b48556c686c
       - type: file
-        url: https://files.pythonhosted.org/packages/59/73/d8f2d961ecd548685d770fb005e355514573d2108d8ed9460d7a1f1870b5/fonttools-4.37.4-py3-none-any.whl
-        sha256: afae1b39555f9c3f0ad1f0f1daf678e5ad157e38c8842ecb567951bf1a9b9fd7
+        url: https://files.pythonhosted.org/packages/e3/d9/e9bae85e84737e76ebbcbea13607236da0c0699baed0ae4f1151b728a608/fonttools-4.38.0-py3-none-any.whl
+        sha256: 820466f43c8be8c3009aef8b87e785014133508f0de64ec469e4efb643ae54fb
       - type: file
         url: https://files.pythonhosted.org/packages/05/8e/8de486cbd03baba4deef4142bd643a3e7bbe954a784dc1bb17142572d127/packaging-21.3-py3-none-any.whl
         sha256: ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
@@ -393,13 +393,13 @@ modules:
           - pip3 install --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} setuptools_scm_git_archive --no-build-isolation  --use-deprecated=legacy-resolver
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/78/a2/aee5edbf18bbd5dd6b90a762e54d15182bc840e8ac34fc1993f99795ebe7/setuptools_scm_git_archive-1.2.tar.gz
-            sha256: 92e8149c1f4a62fe170962b4ff8cb3d53bfa90fc944f1f1758cebaef56a67f13
+            url: https://files.pythonhosted.org/packages/69/5f/7135eec07395c51d3dd6899251b277405ecc2f8f7a80ef80a483e3c5a2bd/setuptools_scm_git_archive-1.4.tar.gz
+            sha256: b048b27b32e1e76ec865b0caa4bb85df6ddbf4697d6909f567ac36709f6ef2f0
       - name: certifi
         buildsystem: simple
         build-commands:
           - pip3 install --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} --no-build-isolation certifi
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz
-            sha256: 78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872
+            url: https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz
+            sha256: 0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14
