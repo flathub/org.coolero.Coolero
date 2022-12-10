@@ -114,8 +114,8 @@ modules:
       - x86_64
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/bd/21/7c899328b7d46b0d0504149f4eb0de55bd0027c058e53cfd355d727c763e/PySide6_Essentials-6.4.0.1-cp37-abi3-manylinux_2_28_x86_64.whl
-        sha256: 1ba1c475568392db633da032799ff84e4b1c8e0ba863e88118b4f5ae0c312fb1
+        url: https://files.pythonhosted.org/packages/32/69/e5dae85aa65d437edd840bbad1871b0ea311ba14a31b196aa420a178621c/PySide6_Essentials-6.4.1-cp37-abi3-manylinux_2_28_x86_64.whl
+        sha256: 457d73bb38cf7fb573a24da00ecb9aa7b8cf6a4cb5cc8ffcce2c241502a6e774
     modules:
       - name: shiboken6
         buildsystem: simple
@@ -124,8 +124,8 @@ modules:
             --prefix=${FLATPAK_DEST} shiboken6 --no-build-isolation
         sources:
           - type: file
-            url: https://files.pythonhosted.org/packages/6b/89/eb01d7015c25587d38dc1712ee6bb6032426e71726f900e22c7f0a18d2e7/shiboken6-6.4.0.1-cp37-abi3-manylinux_2_28_x86_64.whl
-            sha256: e7f91a1f88ec27b2039df1ea4c92eb89cf7c93d80f93363db66f7a226dad9439
+            url: https://files.pythonhosted.org/packages/72/ec/6bef61f5b07be13fd8255fdc5c66d8a097581cc58163457cc219ea3afe7b/shiboken6-6.4.1-cp37-abi3-manylinux_2_28_x86_64.whl
+            sha256: 41e67b67f65626bdd909f9c5fd5f80231ee6ae43418b331590ba225b3cfabd5b
 
   - name: coolero
     buildsystem: simple
