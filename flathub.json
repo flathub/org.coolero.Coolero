@@ -1,5 +1,6 @@
 {
   "only-arches": [
     "x86_64"
-  ]
+  ],
+  "end-of-life": "The Project name and implementation has changed, and is now called CoolerControl. See the project page for more information."
 }
